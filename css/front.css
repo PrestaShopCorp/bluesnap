@@ -1,0 +1,80 @@
+a.bluesnap_link.orange {
+    /*cursor: pointer;
+    color: #FFFFFF;
+    font-size: 16px;
+    padding: 3px 15px;
+    margin-top: 18px;
+    text-decoration: none;
+    display: inline-block;
+    font-family: "montrealts-regular","Helvetica Neue", Arial, Helvetica, sans-serif;
+    background-image: -o-linear-gradient(top, #f4b222, #f97e05);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, #f4b222),color-stop(0.6, #f97e05));
+    background: -moz-linear-gradient(top center,#f4b222,#f97e05 60%);
+    -pie-background: linear-gradient(#f4b222, #f97e05);
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;*/
+}
+
+#module-bluesnap-checkout #left_column {
+    display: none;
+}
+
+#module-bluesnap-checkout #center_column {
+    width: 100%;
+}
+
+.bluesnap_price {
+    font-weight: bold;
+}
+
+#module-bluesnap-checkout td.cart_quantity {
+    text-align: right;
+}
+
+#module-bluesnap-checkout th.cart_quantity{
+    text-align: center;
+}
+
+#bluesnap_header_right{
+    clear: both;
+    float: right;
+}
+
+#bluesnap_logo{
+    left: 0;
+    top: 30px;
+    z-index: 1;
+}
+
+#bluesnap_payment_module {
+    padding-top: 25px;
+    text-transform: none;
+    font-size: 15px;
+}
+
+.bluesnap_logo_left {
+    float: left;
+    margin: 0px 10px 5px 0px;
+}
+
+.bluesnap_container {
+    padding-bottom: 25px;
+}
+
+.bluesnap_container .clear {
+    clear:both;
+}
+
+.bluesnap_container p {
+    padding-bottom: 0px;
+    padding-top: 10px;
+}
+
+.bluesnap_purchase_form .exclusive_large {
+    padding: 12px 10px;
+}
+
+.bluesnap_purchase_form .exclusive_large:active {
+    background-position: left -88px;
+}
