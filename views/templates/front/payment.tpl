@@ -27,7 +27,7 @@
 <div class="payment_module" id="bluesnap_payment_module">
 	<a href="{$bluesnap_url|escape:'htmlall':'UTF-8'}" title="{l s='Local credit cards and payment options (by BlueSnap) based on your country.' mod='bluesnap'}">
         <p>{l s='Local credit cards and payment options (by BlueSnap) based on your country.' mod='bluesnap'}</p>
-        <p><img src="{$bluesnap_path|escape:'htmlall':'UTF-8'}img/logos.png" alt="{l s='Local credit cards and payment options (by BlueSnap) based on your country.' mod='bluesnap'}" style="float:left;" /></p>
-		<br style="clear:both;" />
+        <p><img src="{$bluesnap_path|escape:'htmlall':'UTF-8'}img/logos.png" alt="{l s='Local credit cards and payment options (by BlueSnap) based on your country.' mod='bluesnap'}" id="bluesnap_img" /></p>
+		<br class="clearfix" />
 	</a>
 </div>

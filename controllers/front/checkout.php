@@ -137,16 +137,18 @@ ModuleFrontController {
 		}
 
 		$cart_product_context = Context::getContext()->cloneContext();
-		foreach ($summary['products'] as $key => &$product)
+		foreach ($summary['products'] as &$product)
 		{
 			$product['quantity'] = $product['cart_quantity']; // for compatibility with 1.2 themes
 
 			if ($cart_product_context->shop->id != $product['id_shop'])
 				$cart_product_context->shop = new Shop((int)$product['id_shop']);
-			$product['price_without_specific_price'] = Product::getPriceStatic(
-							$product['id_product'], !Product::getTaxCalculationMethod(),
-					$product['id_product_attribute'], 2, null, false, false, 1, false, null, null, null, null, true,
-					true, $cart_product_context);
+				$null = null;
+				$product['price_without_specific_price'] = Product::getPriceStatic(
+					$product['id_product'], !Product::getTaxCalculationMethod(),
+					$product['id_product_attribute'], 2, null, false, false, 1, false, null, null, null, $null, true,
+					true, $cart_product_context
+				);
 
 			if (Product::getTaxCalculationMethod())
 				$product['is_discounted'] = $product['price_without_specific_price'] != $product['price'];

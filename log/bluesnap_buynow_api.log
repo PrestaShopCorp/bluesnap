@@ -1,0 +1,38 @@
+Sending request to `https://sandbox.plimus.com/services/2/tools/param-encryption':
+<?xml version="1.0" encoding="UTF-8"?>
+<param-encryption xmlns="http://ws.plimus.com">
+
+			<parameters>
+<parameter>
+<param-key><![CDATA[sku2145340priceamount]]></param-key>
+
+				<param-value><![CDATA[83.05]]></param-value>
+</parameter>
+<parameter>
+<param-key><![CDATA[sku2145340name]]></param-key>
+
+				<param-value><![CDATA[Номер заказаIHBITXAPL]]></param-value>
+</parameter>
+<parameter>
+<param-key><![CDATA[sku2145340pricecurrency]]></param-key>
+
+				<param-value><![CDATA[USD]]></param-value>
+</parameter>
+<parameter>
+<param-key><![CDATA[expirationInMinutes]]></param-key>
+
+				<param-value><![CDATA[90]]></param-value>
+</parameter>
+  </parameters>
+</param-encryption>
+
+
+ - 2014-06-27 05:44:04
+Response text:
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<param-encryption xmlns="http://ws.plimus.com">
+<encrypted-token>%2FybvsI3MsunhfEqSniBP7UvYHoWWaeArwNydG9%2BhgdO050RElRHXGDuqhGbizYkTvpBl3eqoJlcyPmfRRCpFZ5%2Bv1rDYm5vv5rELC0jFE6G1y7SPfKwvSZe6UW5oG81vs3eBD0gPRBVNiC8Of8PiPyh98XgVUsYQkpQE3nzGxqzJanBPJ1xVvjUKblmK43JJoc%2FErzcBBNcXGBWH%2B7cTIQ%3D%3D</encrypted-token>
+</param-encryption>
+
+
+ - 2014-06-27 05:44:08

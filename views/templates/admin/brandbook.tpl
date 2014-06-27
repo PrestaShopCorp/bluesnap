@@ -40,10 +40,10 @@
 		<div class="bluesnap-desc-col1">
 			<div class="bluesnap-desc-subtitle">{l s='Expand your global coverage' mod='bluesnap'}</div>
 			<ul class="bluesnap-desc-list">
-				<li class="bluesnap-desc-list-item"><big>29</big> {l s='languages' mod='bluesnap'}</li>
-				<li class="bluesnap-desc-list-item"><big>60</big> {l s='currencies' mod='bluesnap'}</li>
-				<li class="bluesnap-desc-list-item"><big>110</big> {l s='payment types' mod='bluesnap'}</li>
-				<li class="bluesnap-desc-list-item"><big>180</big> {l s='countries' mod='bluesnap'}</li>
+				<li class="bluesnap-desc-list-item"><span class="big">29</span> {l s='languages' mod='bluesnap'}</li>
+				<li class="bluesnap-desc-list-item"><span class="big">60</span> {l s='currencies' mod='bluesnap'}</li>
+				<li class="bluesnap-desc-list-item"><span class="big">110</span> {l s='payment types' mod='bluesnap'}</li>
+				<li class="bluesnap-desc-list-item"><span class="big">180</span> {l s='countries' mod='bluesnap'}</li>
 			</ul>
 		</div>
 		<div class="bluesnap-desc-col2">

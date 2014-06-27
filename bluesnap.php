@@ -38,7 +38,7 @@ require_once _PS_MODULE_DIR_.'bluesnap/includer.php';
  */
 class Bluesnap extends PaymentModule {
 
-	const PREFIX = 'bluesnap_';
+	const PREFIX = 'BLUESNAP_';
 	const SANDBOX_CHECKOUT_URL = 'https://sandbox.plimus.com/buynow/checkout';
 	const CHECKOUT_URL = 'https://www.plimus.com/buynow/checkout';
 	const LOG_FILE = 'log/bluesnap.log';
@@ -55,22 +55,24 @@ class Bluesnap extends PaymentModule {
 		'BackOfficeHeader',
 	);
 
+	protected $html = '';
+
 	/**
 	 * module settings
 	 *
 	 * @var array
 	 */
 	protected $module_params = array(
-		'user' => '',
-		'pswd' => '',
-		'sandbox_user' => '',
-		'sandbox_pswd' => '',
-		'store' => '',
-		'sandbox' => 0,
-		'contract' => '',
-		'protection_key' => '',
-		'buynow_debug_mode' => '',
-		'api_debug_mode' => '',
+		'USER' => '',
+		'PSWD' => '',
+		'SANDBOX_USER' => '',
+		'SANDBOX_USER' => '',
+		'STORE' => '',
+		'SANDBOX' => 0,
+		'CONTRACT' => '',
+		'PROTECTION_KEY' => '',
+		'BUYNOW_DEBUG_MODE' => '',
+		'API_DEBUG_MODE' => '',
 	);
 
 	/**
@@ -107,8 +109,7 @@ class Bluesnap extends PaymentModule {
 	{
 		$this->name = 'bluesnap';
 		$this->tab = 'payments_gateways';
-		$this->version = '1.0.0';
-		//$this->ps_versions_compliancy = array('min' => '1.5', 'max' => '1.5');
+		$this->version = '1.5.1';
 		$this->author = 'BelVG';
 		$this->need_instance = 1;
 		$this->is_configurable = 1;
@@ -116,13 +117,14 @@ class Bluesnap extends PaymentModule {
 
 		parent::__construct();
 
+		$this->ps_versions_compliancy = array('min' => '1.5.0', 'max' => '1.5.9');
 		$this->displayName = $this->l('BlueSnap BuyNow');
 		$this->description = $this->l('Accept online payments easily and securely with a smarter payment gateway.
 				BlueSnap has helped over 5,000 merchants convert more shoppers to buyers worldwide.');
-		if ($this->getConfig('sandbox'))
-			$this->api = new BluesnapApi($this->getConfig('sandbox_user'), $this->getConfig('sandbox_pswd'));
+		if ($this->getConfig('SANDBOX'))
+			$this->api = new BluesnapApi($this->getConfig('SANDBOX_USER'), $this->getConfig('SANDBOX_PSWD'));
 		else
-			$this->api = new BluesnapApi($this->getConfig('user'), $this->getConfig('pswd'));
+			$this->api = new BluesnapApi($this->getConfig('USER'), $this->getConfig('PSWD'));
 
 		/* Backward compatibility */
 		if (version_compare(_PS_VERSION_, '1.5', '<'))
@@ -144,8 +146,14 @@ class Bluesnap extends PaymentModule {
 					return false;
 			}
 
-			if (!$this->installConfiguration() || !function_exists('curl_version'))
+			if (!$this->installConfiguration())
 				return false;
+
+			if (!function_exists('curl_version'))
+			{
+				$this->_errors[] = $this->l('Unable to install the module (CURL isn\'t installed).');
+				return false;
+			}
 
 			return true;
 		}
@@ -166,13 +174,14 @@ class Bluesnap extends PaymentModule {
 				return false;
 		}
 
-		Db::getInstance()->Execute('CREATE TABLE IF NOT EXISTS `'._DB_PREFIX_.'bluesnap_order` (
-            `id_bluesnap_order` int(11) unsigned NOT NULL AUTO_INCREMENT,
-            `prestashop_reference` varchar(9) NULL,
-            `bluesnap_reference` int(11) NOT NULL,
-            `refunded` tinyint(1) NOT NULL,
-            PRIMARY KEY (`id_bluesnap_order`)
-        ) ENGINE= '._MYSQL_ENGINE_.' DEFAULT CHARSET=utf8');
+		if (!Db::getInstance()->Execute('CREATE TABLE IF NOT EXISTS `'._DB_PREFIX_.'bluesnap_order` (
+                `id_bluesnap_order` int(11) unsigned NOT NULL AUTO_INCREMENT,
+                `prestashop_reference` varchar(9) NULL,
+                `bluesnap_reference` int(11) NOT NULL,
+                `refunded` tinyint(1) NOT NULL,
+                PRIMARY KEY (`id_bluesnap_order`)
+            ) ENGINE= '._MYSQL_ENGINE_.' DEFAULT CHARSET=utf8'))
+			return false;
 
 		//waiting payment status creation
 		$this->createBluesnapPaymentStatus($this->os_statuses, '#3333FF', '', false, false, '', false);
@@ -193,14 +202,16 @@ class Bluesnap extends PaymentModule {
 	 */
 	public function uninstall()
 	{
-		$uninstall = parent::uninstall();
-		foreach ($this->hooks as $hook)
+		if (parent::uninstall())
 		{
-			if (!$this->unregisterHook($hook))
-				return false;
+			foreach ($this->hooks as $hook)
+			{
+				if (!$this->unregisterHook($hook))
+					return false;
+			}
 		}
 
-		return $uninstall;
+		return true;
 	}
 
 	/**
@@ -222,7 +233,7 @@ class Bluesnap extends PaymentModule {
 			if ($ow_status === false)
 			{
 				$order_state = new OrderState();
-				$order_state->id_order_state = (int)$key;
+				//$order_state->id_order_state = (int)$key;
 			}
 			else
 				$order_state = new OrderState((int)$ow_status);
@@ -282,7 +293,7 @@ class Bluesnap extends PaymentModule {
 	 */
 	public static function getConfig($name)
 	{
-		return Configuration::get(self::PREFIX.$name);
+		return Configuration::get(Tools::strtoupper(self::PREFIX.$name));
 	}
 
 	/**
@@ -294,7 +305,7 @@ class Bluesnap extends PaymentModule {
 	 */
 	public static function setConfig($name, $value)
 	{
-		return Configuration::updateValue(self::PREFIX.$name, $value);
+		return Configuration::updateValue(Tools::strtoupper(self::PREFIX.$name), $value);
 	}
 
 	/**
@@ -309,13 +320,13 @@ class Bluesnap extends PaymentModule {
 		foreach ($this->fields_form as $field_form)
 		{
 			foreach ($field_form['form']['input'] as $input)
-				$helper->fields_value[$input['name']] = $this->getConfig($input['name']);
+				$helper->fields_value[$input['name']] = $this->getConfig(Tools::strtoupper($input['name']));
 		}
 
-		$this->_html .= $this->generateBrandbook();
-		$this->_html .= $helper->generateForm($this->fields_form);
+		$this->html .= $this->generateBrandbook();
+		$this->html .= $helper->generateForm($this->fields_form);
 
-		return $this->_html;
+		return $this->html;
 	}
 
 	public function generateBrandbook()
@@ -452,8 +463,9 @@ class Bluesnap extends PaymentModule {
 	 */
 	private function initToolbar()
 	{
-		$this->toolbar_btn['save'] = array('href' => '#', 'desc' => $this->l('Save'));
-		return $this->toolbar_btn;
+		$toolbar_btn = array();
+		$toolbar_btn['save'] = array('href' => '#', 'desc' => $this->l('Save'));
+		return $toolbar_btn;
 	}
 
 	/**
@@ -463,7 +475,6 @@ class Bluesnap extends PaymentModule {
 	{
 		if (Tools::isSubmit('submitUpdate'))
 		{
-			$warnings = '';
 			$data = $_POST;
 			if (is_array($data))
 			{
@@ -476,15 +487,9 @@ class Bluesnap extends PaymentModule {
 				}
 			}
 
-			if (empty($warnings))
-			{
-				Tools::redirectAdmin('index.php?tab=AdminModules&conf=4&configure='.$this->name.
-						'&token='.Tools::getAdminToken('AdminModules'.
-								(int)Tab::getIdFromClassName('AdminModules').(int)$this->context->employee->id));
-			}
-
-			foreach ($warnings as $warning)
-				$this->_html .= '<div class="alert warn">'.$warning.'</div>';
+			Tools::redirectAdmin('index.php?tab=AdminModules&conf=4&configure='.$this->name.
+			'&token='.Tools::getAdminToken('AdminModules'.
+			(int)Tab::getIdFromClassName('AdminModules').(int)$this->context->employee->id));
 		}
 	}
 
@@ -566,8 +571,6 @@ class Bluesnap extends PaymentModule {
 					}
 				}
 			}
-
-			$this->api->refund($reference_number);
 		}
 	}
 
@@ -580,7 +583,7 @@ class Bluesnap extends PaymentModule {
 	public function getCheckoutUrl($id_order)
 	{
 		$order_obj = new Order($id_order);
-		if ($this->getConfig('sandbox'))
+		if ($this->getConfig('SANDBOX'))
 			$bluesnap_url = self::SANDBOX_CHECKOUT_URL;
 		else
 			$bluesnap_url = self::CHECKOUT_URL;
@@ -588,11 +591,11 @@ class Bluesnap extends PaymentModule {
 		$bluesnap_url .= '?';
 		$currency = Currency::getCurrency($order_obj->id_currency);
 		$bluesnap_params = array(
-			'storeId' => (int)$this->getConfig('store'),
+			'storeId' => (int)$this->getConfig('STORE'),
 			'currency' => $currency['iso_code'],
 			'email' => Context::getContext()->cookie->email,
 			//'language' => Context::getContext()->language->name,
-			'sku'.$this->getConfig('contract') => 1,
+			'sku'.$this->getConfig('CONTRACT') => 1,
 			'custom1' => $order_obj->reference,
 		);
 		if ($api_lang = BluesnapApi::getLangByIso(Context::getContext()->language->iso_code))
@@ -604,10 +607,10 @@ class Bluesnap extends PaymentModule {
 		$bluesnap_url .= http_build_query($bluesnap_params, '', '&');
 		$enc = $this->api->paramEncryption(
 				array(
-					"sku{$this->getConfig('contract')}priceamount" =>
+					"sku{$this->getConfig('CONTRACT')}priceamount" =>
 					$this->getAmountByReference($order_obj->reference),
-					"sku{$this->getConfig('contract')}name" => $this->getOrderItemOverrideName($order_obj),
-					"sku{$this->getConfig('contract')}pricecurrency" => $currency['iso_code'],
+					"sku{$this->getConfig('CONTRACT')}name" => $this->getOrderItemOverrideName($order_obj),
+					"sku{$this->getConfig('CONTRACT')}pricecurrency" => $currency['iso_code'],
 					'expirationInMinutes' => 90,
 		));
 		$bluesnap_url .= '&enc='.$enc;

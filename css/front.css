@@ -28,6 +28,10 @@ a.bluesnap_link.orange {
     font-weight: bold;
 }
 
+#module-bluesnap-checkout td#cart_quantity_text_center {
+    text-align: center;
+}
+
 #module-bluesnap-checkout td.cart_quantity {
     text-align: right;
 }
@@ -45,6 +49,10 @@ a.bluesnap_link.orange {
     left: 0;
     top: 30px;
     z-index: 1;
+}
+
+#bluesnap_payment_module #bluesnap_img {
+    float:left;
 }
 
 #bluesnap_payment_module {
@@ -77,4 +85,12 @@ a.bluesnap_link.orange {
 
 .bluesnap_purchase_form .exclusive_large:active {
     background-position: left -88px;
+}
+
+#cart_summary .span-left{
+    float:left;
+}
+
+#cart_summary .span-line-through{
+    text-decoration:line-through;
 }

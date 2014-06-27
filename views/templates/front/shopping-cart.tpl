@@ -202,7 +202,7 @@
                     </td>
                     <td class="cart_quantity" colspan="3">
                         {if isset($cannotModify) AND $cannotModify == 1}
-                            <span style="float:left">{if $quantityDisplayed == 0 AND isset($customizedDatas.$productId.$productAttributeId)}{$customizedDatas.$productId.$productAttributeId|@count|escape:'htmlall':'UTF-8'}{else}{$product.cart_quantity-$quantityDisplayed|escape:'htmlall':'UTF-8'}{/if}</span>
+                            <span class="span-left">{if $quantityDisplayed == 0 AND isset($customizedDatas.$productId.$productAttributeId)}{$customizedDatas.$productId.$productAttributeId|@count|escape:'htmlall':'UTF-8'}{else}{$product.cart_quantity-$quantityDisplayed|escape:'htmlall':'UTF-8'}{/if}</span>
                         {else}
                             <input type="hidden" value="{$customization.quantity|escape:'htmlall':'UTF-8'}" name="quantity_{$product.id_product|intval}_{$product.id_product_attribute|intval}_{$id_customization|intval}_{$product.id_address_delivery|intval}_hidden"/>
                             <input size="2" type="text" value="{$customization.quantity|escape:'htmlall':'UTF-8'}" class="cart_quantity_input" name="quantity_{$product.id_product|intval}_{$product.id_product_attribute|intval}_{$id_customization|intval}_{$product.id_address_delivery|intval}"/>

@@ -61,7 +61,7 @@ class BluesnapIpn extends BluesnapApi {
 	 */
 	public function __construct()
 	{
-		$this->is_debug_mode = Configuration::get('bluesnap_buynow_debug_mode');
+		$this->is_debug_mode = Configuration::get('BLUESNAP_BUYNOW_DEBUG_MODE');
 		$this->debug_log_name = 'log/bluesnap_buynow_ipn.log';
 	}
 
@@ -77,7 +77,7 @@ class BluesnapIpn extends BluesnapApi {
 
 		$valid_auth_key_str = Tools::getValue(self::PARAM_REFERENCE_NUMBER)
 				.Tools::getValue(self::PARAM_CONTRACT_ID)
-				.Configuration::get('bluesnap_protection_key');
+				.Configuration::get('BLUESNAP_PROTECTION_KEY');
 
 		return (md5($valid_auth_key_str) == Tools::getValue(self::PARAM_AUTH_KEY));
 	}
@@ -254,7 +254,7 @@ class BluesnapIpn extends BluesnapApi {
 	 */
 	public function getOkResponseString()
 	{
-		$response_text = 'OK'.Configuration::get('bluesnap_protection_key');
+		$response_text = 'OK'.Configuration::get('BLUESNAP_PROTECTION_KEY');
 		return md5($response_text);
 	}
 

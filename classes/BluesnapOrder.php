@@ -52,12 +52,12 @@ class BluesnapOrder extends ObjectModel {
 
 	public static function getByPsOrderReference($prestashop_reference, $refunded = false)
 	{
-		$sql = 'SELECT * FROM `'._DB_PREFIX_.'bluesnap_order`
-            WHERE 1 AND '.
-				($refunded ? 'refunded != 1 AND' : '').'
-            prestashop_reference = "'.pSQL($prestashop_reference).'"';
-
-		return Db::getInstance()->getRow($sql);
+		return Db::getInstance()->getRow(
+			'SELECT * FROM `'._DB_PREFIX_.'bluesnap_order`
+			WHERE 1 '.
+			($refunded ? 'AND refunded != 1 ' : '').'
+			AND prestashop_reference = "'.pSQL($prestashop_reference).'"'
+		);
 	}
 
 	/**

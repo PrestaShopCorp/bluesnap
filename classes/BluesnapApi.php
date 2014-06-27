@@ -79,7 +79,7 @@ class BluesnapApi {
 	{
 		$this->user = $user;
 		$this->password = $password;
-		$this->is_debug_mode = Configuration::get('bluesnap_api_debug_mode');
+		$this->is_debug_mode = Configuration::get('BLUESNAP_API_DEBUG_MODE');
 	}
 
 	/**
@@ -120,7 +120,7 @@ class BluesnapApi {
 	 */
 	protected function getServiceUrl($service)
 	{
-		$api_url = Configuration::get('bluesnap_sandbox') ? self::API_BASE_URL_SANDBOX : self::API_BASE_URL;
+		$api_url = Configuration::get('BLUESNAP_SANDBOX') ? self::API_BASE_URL_SANDBOX : self::API_BASE_URL;
 		$url = implode('/', array($api_url, self::VERSION, $service));
 
 		return $url;
@@ -187,7 +187,8 @@ class BluesnapApi {
 			//throw new PrestaShopException('cURL error "'.curl_errno().': '.curl_error().'"');
 			bluesnap::log('cURL error "'.curl_errno().': '.curl_error().'"');
 		}
-//print_r($responseXml); die;
+
+		//print_r($responseXml); die;
 		curl_close($ch);
 		$this->logDebug("Response text:\n{$response_xml}\n\n");
 		// create XML object

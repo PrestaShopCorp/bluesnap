@@ -45,10 +45,11 @@ class BluesnapBuynowModuleFrontController extends
 	 */
 	public function init()
 	{
+		parent::init();
+
 		try {
-			$ipn_model = new BluesnapIpn(Configuration::get('bluesnap_user'), Configuration::get('bluesnap_pswd'));
-			$processed = $ipn_model->processTransactionRequest();
-			if ($processed)
+			$ipn_model = new BluesnapIpn(Configuration::get('BLUESNAP_USER'), Configuration::get('BLUESNAP_PSWD'));
+			if ($ipn_model->processTransactionRequest())
 				echo $ipn_model->getOkResponseString();
 		} catch (Exception $e) {
 			bluesnap::log('IPN exception: '.$e->getMessage());

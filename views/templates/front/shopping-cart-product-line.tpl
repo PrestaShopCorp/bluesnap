@@ -39,7 +39,7 @@
 				<span class="gift-icon">{l s='Gift!' mod='bluesnap'}</span>
 			{else}
 				{if isset($product.is_discounted) && $product.is_discounted}
-					<span style="text-decoration:line-through;">{convertPrice price=$product.price_without_specific_price}</span><br />
+					<span class="span-line-through">{convertPrice price=$product.price_without_specific_price}</span><br />
 				{/if}
 				{if !$priceDisplay}
 					{convertPrice price=$product.price_wt}
@@ -49,9 +49,9 @@
 			{/if}
 		</span>
 	</td>
-	<td class="cart_quantity"{if isset($customizedDatas.$productId.$productAttributeId) AND $quantityDisplayed == 0} style="text-align: center;"{/if}>
+	<td class="cart_quantity"{if isset($customizedDatas.$productId.$productAttributeId) AND $quantityDisplayed == 0} id="cart_quantity_text_center"{/if}>
 		{if isset($cannotModify) AND $cannotModify == 1}
-			<span style="float:left">
+			<span class="span-left" >
 				{if $quantityDisplayed == 0 AND isset($customizedDatas.$productId.$productAttributeId)}
                     {$customizedDatas.$productId.$productAttributeId|@count|escape:'htmlall':'UTF-8'}
 				{else}
