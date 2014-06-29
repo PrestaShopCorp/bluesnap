@@ -109,15 +109,16 @@ class Bluesnap extends PaymentModule {
 	{
 		$this->name = 'bluesnap';
 		$this->tab = 'payments_gateways';
-		$this->version = '1.5.1';
+		$this->version = '1.6.1';
 		$this->author = 'BelVG';
 		$this->need_instance = 1;
 		$this->is_configurable = 1;
+		$this->bootstrap = true;
 		$this->module_key = '';
 
 		parent::__construct();
 
-		$this->ps_versions_compliancy = array('min' => '1.5.0', 'max' => '1.5.9');
+		$this->ps_versions_compliancy = array('min' => '1.6.0', 'max' => '1.6.9');
 		$this->displayName = $this->l('BlueSnap BuyNow');
 		$this->description = $this->l('Accept online payments easily and securely with a smarter payment gateway.
 				BlueSnap has helped over 5,000 merchants convert more shoppers to buyers worldwide.');
@@ -362,11 +363,11 @@ class Bluesnap extends PaymentModule {
 				'logo.gif'),
 			'submit' => array(
 				'name' => 'submitUpdate',
-				'title' => $this->l('   Save   '),
-				'class' => 'button'),
+				'title' => $this->l('   Save   ')
+			),
 			'input' => array(
 				array(
-					'type' => 'radio',
+					'type' => 'switch',
 					'values' => array(
 						array('label' => $this->l('Yes'), 'value' => 1, 'id' => 'sandbox_on'),
 						array('label' => $this->l('No'), 'value' => 0, 'id' => 'sandbox_off'),
@@ -390,7 +391,7 @@ class Bluesnap extends PaymentModule {
 					'desc' => $this->l('Leave this field blank if you do not want to change your password.')
 				),
 				array(
-					'type' => 'radio',
+					'type' => 'switch',
 					'values' => array(
 						array('label' => $this->l('Yes'), 'value' => 1, 'id' => 'sandbox_on'),
 						array('label' => $this->l('No'), 'value' => 0, 'id' => 'sandbox_off'),
@@ -426,9 +427,13 @@ class Bluesnap extends PaymentModule {
 			'tinymce' => true,
 			'legend' => array('title' => $this->l('BlueSnap BuyNow'), 'image' => $this->_path.
 				'logo.gif'),
+			'submit' => array(
+				'name' => 'submitUpdate',
+				'title' => $this->l('   Save   ')
+			),
 			'input' => array(
 				array(
-					'type' => 'radio',
+					'type' => 'switch',
 					'values' => array(
 						array('label' => $this->l('Yes'), 'value' => 1, 'id' => 'sandbox_on'),
 						array('label' => $this->l('No'), 'value' => 0, 'id' => 'sandbox_off'),

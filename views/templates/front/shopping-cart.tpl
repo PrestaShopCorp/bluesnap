@@ -24,8 +24,8 @@
 * @license    http://store.belvg.com/BelVG-LICENSE-COMMUNITY.txt
 *}
 
-<div id="order-detail-content" class="grid_9 alpha omega">
-    <table id="cart_summary" class="std">
+<div id="order-detail-content" class="table_block table-responsive">
+    <table id="cart_summary" class="table table-bordered">
     <thead>
     <tr>
         <th class="cart_product first_item">{l s='Product' mod='bluesnap'}</th>
