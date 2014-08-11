@@ -39,8 +39,8 @@ require_once _PS_MODULE_DIR_.'bluesnap/includer.php';
 class Bluesnap extends PaymentModule {
 
 	const PREFIX = 'BLUESNAP_';
-	const SANDBOX_CHECKOUT_URL = 'https://sandbox.plimus.com/buynow/checkout';
-	const CHECKOUT_URL = 'https://www.plimus.com/buynow/checkout';
+	const SANDBOX_CHECKOUT_URL = 'https://sandbox.bluesnap.com/buynow/checkout';
+	const CHECKOUT_URL = 'https://www.bluesnap.com/buynow/checkout';
 	const LOG_FILE = 'log/bluesnap.log';
 
 	/**
@@ -109,7 +109,7 @@ class Bluesnap extends PaymentModule {
 	{
 		$this->name = 'bluesnap';
 		$this->tab = 'payments_gateways';
-		$this->version = '1.6.2.2';
+		$this->version = '1.6.2.3';
 		$this->author = 'BelVG';
 		$this->need_instance = 1;
 		$this->is_configurable = 1;

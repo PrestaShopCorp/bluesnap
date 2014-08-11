@@ -47,10 +47,7 @@ ModuleFrontController {
 	 */
 	public function postProcess()
 	{
-		if ($this->context->cart->id_customer == 0 ||
-				$this->context->cart->id_address_delivery == 0 ||
-				$this->context->cart->id_address_invoice == 0 ||
-				!$this->module->active)
+		if ($this->context->cart->id_customer == 0 || $this->context->cart->id_address_delivery == 0 || $this->context->cart->id_address_invoice == 0 || !$this->module->active)
 			Tools::redirectLink(__PS_BASE_URI__.'order.php?step=1');
 
 		/* Check that this payment option is still available in case the customer changed
