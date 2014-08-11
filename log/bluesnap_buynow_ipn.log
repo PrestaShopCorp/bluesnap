@@ -1,0 +1,2500 @@
+POST:
+invoiceState: AR
+invoiceCountry: US
+invoiceCompany: 
+invoiceExtension: 
+invoiceCity: 
+invoiceAddress1: 
+invoiceAddress2: 
+invoiceTitle: 
+invoiceFaxNumber: 
+invoiceEmail: alexandr.simonchik@gmail1.com
+invoiceWorkPhone: 
+invoiceFirstName: Alexander
+invoiceMobilePhone: 
+invoiceLastName: Simonchik
+invoiceZipCode: 
+lastName: Simonchik
+accountId: 19560010
+state: AR
+brazilianId: 
+address1: 
+address2: 
+homePhone: 
+city: 
+country: US
+extension: 
+username: 14075124965543618812171649006163
+title: 
+faxNumber: 
+mobilePhone: 
+email: alexandr.simonchik@gmail1.com
+company: 
+zipCode: 
+workPhone: 
+firstName: Alexander
+shippingState: AR
+shippingZipCode: 
+shippingMethod: 
+shippingLastName: Simonchik
+shippingAddress1: 
+shippingCountry: US
+shippingAddress2: 
+shippingCity: 
+shippingFirstName: Alexander
+invoiceAmount: 34.00
+referenceNumber: 1008691448
+overridePrice: 34.00
+invoiceAmountUSD: 34.00
+creditCardExpDate: 1/2015
+productId: 299046
+contractPrice: 34.00
+currency: USD
+templateId: 693
+invoiceChargeAmount: 34.00
+contractChargePrice: 34.00
+referrer: 
+remoteAddress: 213.184.226.94
+invoiceChargeCurrency: USD
+testMode: N
+invoiceInfoURL: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=FF0163E640460726FF07918DD8A508B6&acd=857DFBB404713CFA
+creditCardLastFourDigits: 1111
+quantity: 1
+contractId: 2150980
+contractOwner: 396972
+language: RUSSIAN
+productName: Cart #33
+contractName: Cart #33
+creditCardType: VISA
+addCD: N
+untilDate: 08/08/2014 08:41 AM
+paymentType: CC
+paymentMethod: CC
+contractLocalPrice: 34.00
+invoiceLocalCurrency: USD
+invoiceURL: https://sandbox.bluesnap.com/jsp/show_invoice.jsp?ref=FF0163E640460726FF07918DD8A508B6
+invoiceLocalAmount: 34.00
+originalRequestUrl: http://belvg.net/bluesnap_1608/module/bluesnap/checkout
+shopperAdminUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=FF0163E640460726FF07918DD8A508B6&acd=857DFBB404713CFA
+shopperOrderUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=FF0163E640460726FF07918DD8A508B6&acd=857DFBB404713CFA
+recurringDisclaimer: N
+targetBalance: BLUESNAP_ACCOUNT
+promoteContractsNum: 0
+EDWSurchargeUSD: 
+EDWContractId: 
+EDWPeriod: 
+EDWSurcharge: 
+EDWAmount: 
+EDWAmountUSD: 
+prestashop_order_id: 33
+vatId: 
+taxRate: 
+taxAmountUSD: 0.00
+taxChargeAmount: 0.00
+authKey: 5793cb4a437f38fc2a6400215af144b1
+transactionType: CHARGE
+plimusNode: 99
+bluesnapNode: 99
+couponCode: 
+licenseKey: 
+cvvSent: Y
+avsSent: N
+avsResponse: Issuer unavailable or AVS not supported (US Issuer) 
+cvvResponse: Not processed 
+transactionDate: 08/08/2014 08:41 AM
+GET:
+fc: module
+module: bluesnap
+controller: buynow
+ - 2014-08-08 11:41:47
+POST:
+invoiceState: AR
+invoiceCountry: US
+invoiceCompany: 
+invoiceExtension: 
+invoiceCity: 
+invoiceAddress1: 
+invoiceAddress2: 
+invoiceTitle: 
+invoiceFaxNumber: 
+invoiceEmail: alexandr.simonchik@gmail1.com
+invoiceWorkPhone: 
+invoiceFirstName: Alexander
+invoiceMobilePhone: 
+invoiceLastName: Simonchik
+invoiceZipCode: 
+lastName: Simonchik
+accountId: 19560012
+state: AR
+brazilianId: 
+address1: 
+address2: 
+homePhone: 
+city: 
+country: US
+extension: 
+username: 14075128148901071482427561113986
+title: 
+faxNumber: 
+mobilePhone: 
+email: alexandr.simonchik@gmail1.com
+company: 
+zipCode: 
+workPhone: 
+firstName: Alexander
+shippingState: AR
+shippingZipCode: 
+shippingMethod: 
+shippingLastName: Simonchik
+shippingAddress1: 
+shippingCountry: US
+shippingAddress2: 
+shippingCity: 
+shippingFirstName: Alexander
+invoiceAmount: 34.00
+referenceNumber: 1008691450
+overridePrice: 34.00
+invoiceAmountUSD: 34.00
+creditCardExpDate: 1/2015
+productId: 299046
+contractPrice: 34.00
+currency: USD
+templateId: 693
+invoiceChargeAmount: 34.00
+contractChargePrice: 34.00
+referrer: 
+remoteAddress: 213.184.226.94
+invoiceChargeCurrency: USD
+testMode: N
+invoiceInfoURL: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=FF0163E640460726FFBF75C24E92C0C6&acd=15F8A2226A2D584B
+creditCardLastFourDigits: 1111
+quantity: 1
+contractId: 2150980
+contractOwner: 396972
+language: RUSSIAN
+productName: Cart #34
+contractName: Cart #34
+creditCardType: VISA
+addCD: N
+untilDate: 08/08/2014 08:46 AM
+paymentType: CC
+paymentMethod: CC
+contractLocalPrice: 34.00
+invoiceLocalCurrency: USD
+invoiceURL: https://sandbox.bluesnap.com/jsp/show_invoice.jsp?ref=FF0163E640460726FFBF75C24E92C0C6
+invoiceLocalAmount: 34.00
+originalRequestUrl: http://belvg.net/bluesnap_1608/module/bluesnap/checkout
+shopperAdminUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=FF0163E640460726FFBF75C24E92C0C6&acd=15F8A2226A2D584B
+shopperOrderUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=FF0163E640460726FFBF75C24E92C0C6&acd=15F8A2226A2D584B
+recurringDisclaimer: N
+targetBalance: BLUESNAP_ACCOUNT
+promoteContractsNum: 0
+EDWSurchargeUSD: 
+EDWContractId: 
+EDWPeriod: 
+EDWSurcharge: 
+EDWAmount: 
+EDWAmountUSD: 
+prestashop_order_id: 34
+vatId: 
+taxRate: 
+taxAmountUSD: 0.00
+taxChargeAmount: 0.00
+authKey: d73dc79487b4fdb061ef873ef8048b15
+transactionType: CHARGE
+plimusNode: 99
+bluesnapNode: 99
+couponCode: 
+licenseKey: 
+cvvSent: Y
+avsSent: N
+avsResponse: Issuer unavailable or AVS not supported (US Issuer) 
+cvvResponse: Not processed 
+transactionDate: 08/08/2014 08:47 AM
+GET:
+fc: module
+module: bluesnap
+controller: buynow
+ - 2014-08-08 11:47:12
+POST:
+invoiceState: AR
+invoiceCountry: US
+invoiceCompany: 
+invoiceExtension: 
+invoiceCity: 
+invoiceAddress1: 
+invoiceAddress2: 
+invoiceTitle: 
+invoiceFaxNumber: 
+invoiceEmail: alexandr.simonchik@gmail1.com
+invoiceWorkPhone: 
+invoiceFirstName: Alexander
+invoiceMobilePhone: 
+invoiceLastName: Simonchik
+invoiceZipCode: 
+lastName: Simonchik
+accountId: 19560014
+state: AR
+brazilianId: 
+address1: 
+address2: 
+homePhone: 
+city: 
+country: US
+extension: 
+username: 140751300671416389455242033625713
+title: 
+faxNumber: 
+mobilePhone: 
+email: alexandr.simonchik@gmail1.com
+company: 
+zipCode: 
+workPhone: 
+firstName: Alexander
+shippingState: AR
+shippingZipCode: 
+shippingMethod: 
+shippingLastName: Simonchik
+shippingAddress1: 
+shippingCountry: US
+shippingAddress2: 
+shippingCity: 
+shippingFirstName: Alexander
+invoiceAmount: 23.40
+referenceNumber: 1008691452
+overridePrice: 23.40
+invoiceAmountUSD: 23.40
+creditCardExpDate: 1/2015
+productId: 299046
+contractPrice: 23.40
+currency: USD
+templateId: 693
+invoiceChargeAmount: 23.40
+contractChargePrice: 23.40
+referrer: 
+remoteAddress: 213.184.226.94
+invoiceChargeCurrency: USD
+testMode: N
+invoiceInfoURL: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=FF0163E640460726284B0AA5582813B6&acd=A4B57E6AB8861758
+creditCardLastFourDigits: 1111
+quantity: 1
+contractId: 2150980
+contractOwner: 396972
+language: RUSSIAN
+productName: Cart #35
+contractName: Cart #35
+creditCardType: VISA
+addCD: N
+untilDate: 08/08/2014 08:50 AM
+paymentType: CC
+paymentMethod: CC
+contractLocalPrice: 23.40
+invoiceLocalCurrency: USD
+invoiceURL: https://sandbox.bluesnap.com/jsp/show_invoice.jsp?ref=FF0163E640460726284B0AA5582813B6
+invoiceLocalAmount: 23.40
+originalRequestUrl: http://belvg.net/bluesnap_1608/module/bluesnap/checkout
+shopperAdminUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=FF0163E640460726284B0AA5582813B6&acd=A4B57E6AB8861758
+shopperOrderUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=FF0163E640460726284B0AA5582813B6&acd=A4B57E6AB8861758
+recurringDisclaimer: N
+targetBalance: BLUESNAP_ACCOUNT
+promoteContractsNum: 0
+EDWSurchargeUSD: 
+EDWContractId: 
+EDWPeriod: 
+EDWSurcharge: 
+EDWAmount: 
+EDWAmountUSD: 
+prestashop_order_id: 35
+vatId: 
+taxRate: 
+taxAmountUSD: 0.00
+taxChargeAmount: 0.00
+authKey: eaf34485e3c304726000029aeb60d71d
+transactionType: CHARGE
+plimusNode: 99
+bluesnapNode: 99
+couponCode: 
+licenseKey: 
+cvvSent: Y
+avsSent: N
+avsResponse: Issuer unavailable or AVS not supported (US Issuer) 
+cvvResponse: Not processed 
+transactionDate: 08/08/2014 08:50 AM
+GET:
+fc: module
+module: bluesnap
+controller: buynow
+ - 2014-08-08 11:50:33
+POST:
+invoiceState: AR
+invoiceCountry: US
+invoiceCompany: 
+invoiceExtension: 
+invoiceCity: 
+invoiceAddress1: 
+invoiceAddress2: 
+invoiceTitle: 
+invoiceFaxNumber: 
+invoiceEmail: alexandr.simonchik@gmail1.com
+invoiceWorkPhone: 
+invoiceFirstName: Alexander
+invoiceMobilePhone: 
+invoiceLastName: Simonchik
+invoiceZipCode: 
+lastName: Simonchik
+accountId: 19560016
+state: AR
+brazilianId: 
+address1: 
+address2: 
+homePhone: 
+city: 
+country: US
+extension: 
+username: 140751338637419515941531376128416
+title: 
+faxNumber: 
+mobilePhone: 
+email: alexandr.simonchik@gmail1.com
+company: 
+zipCode: 
+workPhone: 
+firstName: Alexander
+shippingState: AR
+shippingZipCode: 
+shippingMethod: 
+shippingLastName: Simonchik
+shippingAddress1: 
+shippingCountry: US
+shippingAddress2: 
+shippingCity: 
+shippingFirstName: Alexander
+invoiceAmount: 23.40
+referenceNumber: 1008691454
+overridePrice: 23.40
+invoiceAmountUSD: 23.40
+creditCardExpDate: 1/2015
+productId: 299046
+contractPrice: 23.40
+currency: USD
+templateId: 693
+invoiceChargeAmount: 23.40
+contractChargePrice: 23.40
+referrer: 
+remoteAddress: 213.184.226.94
+invoiceChargeCurrency: USD
+testMode: N
+invoiceInfoURL: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=FF0163E6404607269D3EC2D9ABC1B7A8&acd=6AAF403DE3759E54
+creditCardLastFourDigits: 1111
+quantity: 1
+contractId: 2150980
+contractOwner: 396972
+language: RUSSIAN
+productName: Cart #36
+contractName: Cart #36
+creditCardType: VISA
+addCD: N
+untilDate: 08/08/2014 08:56 AM
+paymentType: CC
+paymentMethod: CC
+contractLocalPrice: 23.40
+invoiceLocalCurrency: USD
+invoiceURL: https://sandbox.bluesnap.com/jsp/show_invoice.jsp?ref=FF0163E6404607269D3EC2D9ABC1B7A8
+invoiceLocalAmount: 23.40
+originalRequestUrl: http://belvg.net/bluesnap_1608/module/bluesnap/checkout
+shopperAdminUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=FF0163E6404607269D3EC2D9ABC1B7A8&acd=6AAF403DE3759E54
+shopperOrderUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=FF0163E6404607269D3EC2D9ABC1B7A8&acd=6AAF403DE3759E54
+recurringDisclaimer: N
+targetBalance: BLUESNAP_ACCOUNT
+promoteContractsNum: 0
+EDWSurchargeUSD: 
+EDWContractId: 
+EDWPeriod: 
+EDWSurcharge: 
+EDWAmount: 
+EDWAmountUSD: 
+prestashop_order_id: 36
+vatId: 
+taxRate: 
+taxAmountUSD: 0.00
+taxChargeAmount: 0.00
+authKey: d98efc39814bf23d0905ec04a894e719
+transactionType: CHARGE
+plimusNode: 99
+bluesnapNode: 99
+couponCode: 
+licenseKey: 
+cvvSent: Y
+avsSent: N
+avsResponse: Issuer unavailable or AVS not supported (US Issuer) 
+cvvResponse: Not processed 
+transactionDate: 08/08/2014 08:56 AM
+GET:
+fc: module
+module: bluesnap
+controller: buynow
+ - 2014-08-08 11:56:47
+POST:
+invoiceState: AR
+invoiceCountry: US
+invoiceCompany: 
+invoiceExtension: 
+invoiceCity: 
+invoiceAddress1: 
+invoiceAddress2: 
+invoiceTitle: 
+invoiceFaxNumber: 
+invoiceEmail: alexandr.simonchik@gmail1.com
+invoiceWorkPhone: 
+invoiceFirstName: Alexander
+invoiceMobilePhone: 
+invoiceLastName: Simonchik
+invoiceZipCode: 
+lastName: Simonchik
+accountId: 19560018
+state: AR
+brazilianId: 
+address1: 
+address2: 
+homePhone: 
+city: 
+country: US
+extension: 
+username: 1407513555998755928185940997385
+title: 
+faxNumber: 
+mobilePhone: 
+email: alexandr.simonchik@gmail1.com
+company: 
+zipCode: 
+workPhone: 
+firstName: Alexander
+shippingState: AR
+shippingZipCode: 
+shippingMethod: 
+shippingLastName: Simonchik
+shippingAddress1: 
+shippingCountry: US
+shippingAddress2: 
+shippingCity: 
+shippingFirstName: Alexander
+invoiceAmount: 34.00
+referenceNumber: 1008691456
+overridePrice: 34.00
+invoiceAmountUSD: 34.00
+creditCardExpDate: 1/2015
+productId: 299046
+contractPrice: 34.00
+currency: USD
+templateId: 693
+invoiceChargeAmount: 34.00
+contractChargePrice: 34.00
+referrer: 
+remoteAddress: 213.184.226.94
+invoiceChargeCurrency: USD
+testMode: N
+invoiceInfoURL: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=FF0163E6404607267875A974023EE878&acd=0E0383AADB0873ED
+creditCardLastFourDigits: 1111
+quantity: 1
+contractId: 2150980
+contractOwner: 396972
+language: RUSSIAN
+productName: Cart #37
+contractName: Cart #37
+creditCardType: VISA
+addCD: N
+untilDate: 08/08/2014 08:59 AM
+paymentType: CC
+paymentMethod: CC
+contractLocalPrice: 34.00
+invoiceLocalCurrency: USD
+invoiceURL: https://sandbox.bluesnap.com/jsp/show_invoice.jsp?ref=FF0163E6404607267875A974023EE878
+invoiceLocalAmount: 34.00
+originalRequestUrl: http://belvg.net/bluesnap_1608/module/bluesnap/checkout
+shopperAdminUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=FF0163E6404607267875A974023EE878&acd=0E0383AADB0873ED
+shopperOrderUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=FF0163E6404607267875A974023EE878&acd=0E0383AADB0873ED
+recurringDisclaimer: N
+targetBalance: BLUESNAP_ACCOUNT
+promoteContractsNum: 0
+EDWSurchargeUSD: 
+EDWContractId: 
+EDWPeriod: 
+EDWSurcharge: 
+EDWAmount: 
+EDWAmountUSD: 
+prestashop_order_id: 37
+vatId: 
+taxRate: 
+taxAmountUSD: 0.00
+taxChargeAmount: 0.00
+authKey: 4e2713e9b9a7cd6c391b62c9e3aa743c
+transactionType: CHARGE
+plimusNode: 99
+bluesnapNode: 99
+couponCode: 
+licenseKey: 
+cvvSent: Y
+avsSent: N
+avsResponse: Issuer unavailable or AVS not supported (US Issuer) 
+cvvResponse: Not processed 
+transactionDate: 08/08/2014 08:59 AM
+GET:
+fc: module
+module: bluesnap
+controller: buynow
+ - 2014-08-08 11:59:42
+POST:
+invoiceState: AR
+invoiceCountry: US
+invoiceCompany: 
+invoiceExtension: 
+invoiceCity: 
+invoiceAddress1: 
+invoiceAddress2: 
+invoiceTitle: 
+invoiceFaxNumber: 
+invoiceEmail: alexandr.simonchik@gmail1.com
+invoiceWorkPhone: 
+invoiceFirstName: Alexander
+invoiceMobilePhone: 
+invoiceLastName: Simonchik
+invoiceZipCode: 
+lastName: Simonchik
+accountId: 19560020
+state: AR
+brazilianId: 
+address1: 
+address2: 
+homePhone: 
+city: 
+country: US
+extension: 
+username: 14075142712927528249701915950328
+title: 
+faxNumber: 
+mobilePhone: 
+email: alexandr.simonchik@gmail1.com
+company: 
+zipCode: 
+workPhone: 
+firstName: Alexander
+shippingState: AR
+shippingZipCode: 
+shippingMethod: 
+shippingLastName: Simonchik
+shippingAddress1: 
+shippingCountry: US
+shippingAddress2: 
+shippingCity: 
+shippingFirstName: Alexander
+invoiceAmount: 34.00
+referenceNumber: 1008691458
+overridePrice: 34.00
+invoiceAmountUSD: 34.00
+creditCardExpDate: 1/2015
+productId: 299046
+contractPrice: 34.00
+currency: USD
+templateId: 693
+invoiceChargeAmount: 34.00
+contractChargePrice: 34.00
+referrer: 
+remoteAddress: 213.184.226.94
+invoiceChargeCurrency: USD
+testMode: N
+invoiceInfoURL: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=FF0163E6404607267F6844C443CE1160&acd=997981911DB09424
+creditCardLastFourDigits: 1111
+quantity: 1
+contractId: 2150980
+contractOwner: 396972
+language: RUSSIAN
+productName: Cart #38
+contractName: Cart #38
+creditCardType: VISA
+addCD: N
+untilDate: 08/08/2014 09:11 AM
+paymentType: CC
+paymentMethod: CC
+contractLocalPrice: 34.00
+invoiceLocalCurrency: USD
+invoiceURL: https://sandbox.bluesnap.com/jsp/show_invoice.jsp?ref=FF0163E6404607267F6844C443CE1160
+invoiceLocalAmount: 34.00
+originalRequestUrl: http://belvg.net/bluesnap_1608/module/bluesnap/checkout
+shopperAdminUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=FF0163E6404607267F6844C443CE1160&acd=997981911DB09424
+shopperOrderUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=FF0163E6404607267F6844C443CE1160&acd=997981911DB09424
+recurringDisclaimer: N
+targetBalance: BLUESNAP_ACCOUNT
+promoteContractsNum: 0
+EDWSurchargeUSD: 
+EDWContractId: 
+EDWPeriod: 
+EDWSurcharge: 
+EDWAmount: 
+EDWAmountUSD: 
+prestashop_order_id: 38
+vatId: 
+taxRate: 
+taxAmountUSD: 0.00
+taxChargeAmount: 0.00
+authKey: d765fb4b0e1e97915486935cd16fb46a
+transactionType: CHARGE
+plimusNode: 99
+bluesnapNode: 99
+couponCode: 
+licenseKey: 
+cvvSent: Y
+avsSent: N
+avsResponse: Issuer unavailable or AVS not supported (US Issuer) 
+cvvResponse: Not processed 
+transactionDate: 08/08/2014 09:11 AM
+GET:
+fc: module
+module: bluesnap
+controller: buynow
+ - 2014-08-08 12:11:23
+POST:
+invoiceState: AR
+invoiceCountry: US
+invoiceCompany: 
+invoiceExtension: 
+invoiceCity: 
+invoiceAddress1: 
+invoiceAddress2: 
+invoiceTitle: 
+invoiceFaxNumber: 
+invoiceEmail: alexandr.simonchik@gmail1.com
+invoiceWorkPhone: 
+invoiceFirstName: Alexander
+invoiceMobilePhone: 
+invoiceLastName: Simonchik
+invoiceZipCode: 
+lastName: Simonchik
+accountId: 19560022
+state: AR
+brazilianId: 
+address1: 
+address2: 
+homePhone: 
+city: 
+country: US
+extension: 
+username: 140751517874418363955331868417926
+title: 
+faxNumber: 
+mobilePhone: 
+email: alexandr.simonchik@gmail1.com
+company: 
+zipCode: 
+workPhone: 
+firstName: Alexander
+shippingState: AR
+shippingZipCode: 
+shippingMethod: 
+shippingLastName: Simonchik
+shippingAddress1: 
+shippingCountry: US
+shippingAddress2: 
+shippingCity: 
+shippingFirstName: Alexander
+invoiceAmount: 23.40
+referenceNumber: 1008691460
+overridePrice: 23.40
+invoiceAmountUSD: 23.40
+creditCardExpDate: 1/2015
+productId: 299046
+contractPrice: 23.40
+currency: USD
+templateId: 693
+invoiceChargeAmount: 23.40
+contractChargePrice: 23.40
+referrer: 
+remoteAddress: 213.184.226.94
+invoiceChargeCurrency: USD
+testMode: N
+invoiceInfoURL: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=FF0163E6404607261C2984D5A847589C&acd=C4063EE7F1437765
+creditCardLastFourDigits: 1111
+quantity: 1
+contractId: 2150980
+contractOwner: 396972
+language: RUSSIAN
+productName: Cart #39
+contractName: Cart #39
+creditCardType: VISA
+addCD: N
+untilDate: 08/08/2014 09:26 AM
+paymentType: CC
+paymentMethod: CC
+contractLocalPrice: 23.40
+invoiceLocalCurrency: USD
+invoiceURL: https://sandbox.bluesnap.com/jsp/show_invoice.jsp?ref=FF0163E6404607261C2984D5A847589C
+invoiceLocalAmount: 23.40
+originalRequestUrl: http://belvg.net/bluesnap_1608/module/bluesnap/checkout
+shopperAdminUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=FF0163E6404607261C2984D5A847589C&acd=C4063EE7F1437765
+shopperOrderUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=FF0163E6404607261C2984D5A847589C&acd=C4063EE7F1437765
+recurringDisclaimer: N
+targetBalance: BLUESNAP_ACCOUNT
+promoteContractsNum: 0
+EDWSurchargeUSD: 
+EDWContractId: 
+EDWPeriod: 
+EDWSurcharge: 
+EDWAmount: 
+EDWAmountUSD: 
+prestashop_order_id: 39
+vatId: 
+taxRate: 
+taxAmountUSD: 0.00
+taxChargeAmount: 0.00
+authKey: 50ddf57416d75588f5452f2b5a252d3c
+transactionType: CHARGE
+plimusNode: 99
+bluesnapNode: 99
+couponCode: 
+licenseKey: 
+cvvSent: Y
+avsSent: N
+avsResponse: Issuer unavailable or AVS not supported (US Issuer) 
+cvvResponse: Not processed 
+transactionDate: 08/08/2014 09:26 AM
+GET:
+fc: module
+module: bluesnap
+controller: buynow
+ - 2014-08-08 12:26:48
+POST:
+invoiceState: AR
+invoiceCountry: US
+invoiceCompany: 
+invoiceExtension: 
+invoiceCity: 
+invoiceAddress1: 
+invoiceAddress2: 
+invoiceTitle: 
+invoiceFaxNumber: 
+invoiceEmail: alexandr.simonchik@gmail1.com
+invoiceWorkPhone: 
+invoiceFirstName: Alexander
+invoiceMobilePhone: 
+invoiceLastName: Simonchik
+invoiceZipCode: 
+lastName: Simonchik
+accountId: 19560024
+state: AR
+brazilianId: 
+address1: 
+address2: 
+homePhone: 
+city: 
+country: US
+extension: 
+username: 14075152775716514148931309647344
+title: 
+faxNumber: 
+mobilePhone: 
+email: alexandr.simonchik@gmail1.com
+company: 
+zipCode: 
+workPhone: 
+firstName: Alexander
+shippingState: AR
+shippingZipCode: 
+shippingMethod: 
+shippingLastName: Simonchik
+shippingAddress1: 
+shippingCountry: US
+shippingAddress2: 
+shippingCity: 
+shippingFirstName: Alexander
+invoiceAmount: 23.40
+referenceNumber: 1008691462
+overridePrice: 23.40
+invoiceAmountUSD: 23.40
+creditCardExpDate: 1/2015
+productId: 299046
+contractPrice: 23.40
+currency: USD
+templateId: 693
+invoiceChargeAmount: 23.40
+contractChargePrice: 23.40
+referrer: 
+remoteAddress: 213.184.226.94
+invoiceChargeCurrency: USD
+testMode: N
+invoiceInfoURL: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=FF0163E640460726440ED069C7C4A5F2&acd=BC4AE9867EFA2865
+creditCardLastFourDigits: 1111
+quantity: 1
+contractId: 2150980
+contractOwner: 396972
+language: RUSSIAN
+productName: Cart #39
+contractName: Cart #39
+creditCardType: VISA
+addCD: N
+untilDate: 08/08/2014 09:27 AM
+paymentType: CC
+paymentMethod: CC
+contractLocalPrice: 23.40
+invoiceLocalCurrency: USD
+invoiceURL: https://sandbox.bluesnap.com/jsp/show_invoice.jsp?ref=FF0163E640460726440ED069C7C4A5F2
+invoiceLocalAmount: 23.40
+originalRequestUrl: 
+shopperAdminUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=FF0163E640460726440ED069C7C4A5F2&acd=BC4AE9867EFA2865
+shopperOrderUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=FF0163E640460726440ED069C7C4A5F2&acd=BC4AE9867EFA2865
+recurringDisclaimer: N
+targetBalance: BLUESNAP_ACCOUNT
+promoteContractsNum: 0
+EDWSurchargeUSD: 
+EDWContractId: 
+EDWPeriod: 
+EDWSurcharge: 
+EDWAmount: 
+EDWAmountUSD: 
+prestashop_order_id: 39
+vatId: 
+taxRate: 
+taxAmountUSD: 0.00
+taxChargeAmount: 0.00
+authKey: 2a42b51a64870b2da0718aeae2ac1ae8
+transactionType: CHARGE
+plimusNode: 99
+bluesnapNode: 99
+couponCode: 
+licenseKey: 
+cvvSent: Y
+avsSent: N
+avsResponse: Issuer unavailable or AVS not supported (US Issuer) 
+cvvResponse: Not processed 
+transactionDate: 08/08/2014 09:28 AM
+GET:
+fc: module
+module: bluesnap
+controller: buynow
+ - 2014-08-08 12:28:02
+POST:
+invoiceState: AR
+invoiceCountry: US
+invoiceCompany: 
+invoiceExtension: 
+invoiceCity: 
+invoiceAddress1: 
+invoiceAddress2: 
+invoiceTitle: 
+invoiceFaxNumber: 
+invoiceEmail: alexandr.simonchik@gmail1.com
+invoiceWorkPhone: 
+invoiceFirstName: Alexander
+invoiceMobilePhone: 
+invoiceLastName: Simonchik
+invoiceZipCode: 
+lastName: Simonchik
+accountId: 19560026
+state: AR
+brazilianId: 
+address1: 
+address2: 
+homePhone: 
+city: 
+country: US
+extension: 
+username: 1407515322447901224198437926201
+title: 
+faxNumber: 
+mobilePhone: 
+email: alexandr.simonchik@gmail1.com
+company: 
+zipCode: 
+workPhone: 
+firstName: Alexander
+shippingState: AR
+shippingZipCode: 
+shippingMethod: 
+shippingLastName: Simonchik
+shippingAddress1: 
+shippingCountry: US
+shippingAddress2: 
+shippingCity: 
+shippingFirstName: Alexander
+invoiceAmount: 23.40
+referenceNumber: 1008691464
+overridePrice: 23.40
+invoiceAmountUSD: 23.40
+creditCardExpDate: 1/2015
+productId: 299046
+contractPrice: 23.40
+currency: USD
+templateId: 693
+invoiceChargeAmount: 23.40
+contractChargePrice: 23.40
+referrer: 
+remoteAddress: 213.184.226.94
+invoiceChargeCurrency: USD
+testMode: N
+invoiceInfoURL: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=FF0163E640460726C5768186C2DD75FF&acd=69A19774AA40B13A
+creditCardLastFourDigits: 1111
+quantity: 1
+contractId: 2150980
+contractOwner: 396972
+language: RUSSIAN
+productName: Cart #40
+contractName: Cart #40
+creditCardType: VISA
+addCD: N
+untilDate: 08/08/2014 09:28 AM
+paymentType: CC
+paymentMethod: CC
+contractLocalPrice: 23.40
+invoiceLocalCurrency: USD
+invoiceURL: https://sandbox.bluesnap.com/jsp/show_invoice.jsp?ref=FF0163E640460726C5768186C2DD75FF
+invoiceLocalAmount: 23.40
+originalRequestUrl: http://belvg.net/bluesnap_1608/module/bluesnap/checkout
+shopperAdminUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=FF0163E640460726C5768186C2DD75FF&acd=69A19774AA40B13A
+shopperOrderUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=FF0163E640460726C5768186C2DD75FF&acd=69A19774AA40B13A
+recurringDisclaimer: N
+targetBalance: BLUESNAP_ACCOUNT
+promoteContractsNum: 0
+EDWSurchargeUSD: 
+EDWContractId: 
+EDWPeriod: 
+EDWSurcharge: 
+EDWAmount: 
+EDWAmountUSD: 
+prestashop_order_id: 40
+vatId: 
+taxRate: 
+taxAmountUSD: 0.00
+taxChargeAmount: 0.00
+authKey: d77b2ef8bddbbe2b083ee14fca9ce497
+transactionType: CHARGE
+plimusNode: 99
+bluesnapNode: 99
+couponCode: 
+licenseKey: 
+cvvSent: Y
+avsSent: N
+avsResponse: Issuer unavailable or AVS not supported (US Issuer) 
+cvvResponse: Not processed 
+transactionDate: 08/08/2014 09:28 AM
+GET:
+fc: module
+module: bluesnap
+controller: buynow
+ - 2014-08-08 12:28:52
+POST:
+invoiceState: AR
+invoiceCountry: US
+invoiceCompany: 
+invoiceExtension: 
+invoiceCity: 
+invoiceAddress1: 
+invoiceAddress2: 
+invoiceTitle: 
+invoiceFaxNumber: 
+invoiceEmail: alexandr.simonchik@gmail1.com
+invoiceWorkPhone: 
+invoiceFirstName: Alexander
+invoiceMobilePhone: 
+invoiceLastName: Simonchik
+invoiceZipCode: 
+lastName: Simonchik
+accountId: 19560028
+state: AR
+brazilianId: 
+address1: 
+address2: 
+homePhone: 
+city: 
+country: US
+extension: 
+username: 1407515572538726985530336943092
+title: 
+faxNumber: 
+mobilePhone: 
+email: alexandr.simonchik@gmail1.com
+company: 
+zipCode: 
+workPhone: 
+firstName: Alexander
+shippingState: AR
+shippingZipCode: 
+shippingMethod: 
+shippingLastName: Simonchik
+shippingAddress1: 
+shippingCountry: US
+shippingAddress2: 
+shippingCity: 
+shippingFirstName: Alexander
+invoiceAmount: 34.00
+referenceNumber: 1008691466
+overridePrice: 34.00
+invoiceAmountUSD: 34.00
+creditCardExpDate: 1/2015
+productId: 299046
+contractPrice: 34.00
+currency: USD
+templateId: 693
+invoiceChargeAmount: 34.00
+contractChargePrice: 34.00
+referrer: 
+remoteAddress: 213.184.226.94
+invoiceChargeCurrency: USD
+testMode: N
+invoiceInfoURL: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=FF0163E6404607266E3B8925C805CECC&acd=A73CBEA965B76F99
+creditCardLastFourDigits: 1111
+quantity: 1
+contractId: 2150980
+contractOwner: 396972
+language: RUSSIAN
+productName: Cart #41
+contractName: Cart #41
+creditCardType: VISA
+addCD: N
+untilDate: 08/08/2014 09:32 AM
+paymentType: CC
+paymentMethod: CC
+contractLocalPrice: 34.00
+invoiceLocalCurrency: USD
+invoiceURL: https://sandbox.bluesnap.com/jsp/show_invoice.jsp?ref=FF0163E6404607266E3B8925C805CECC
+invoiceLocalAmount: 34.00
+originalRequestUrl: http://belvg.net/bluesnap_1608/module/bluesnap/checkout
+shopperAdminUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=FF0163E6404607266E3B8925C805CECC&acd=A73CBEA965B76F99
+shopperOrderUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=FF0163E6404607266E3B8925C805CECC&acd=A73CBEA965B76F99
+recurringDisclaimer: N
+targetBalance: BLUESNAP_ACCOUNT
+promoteContractsNum: 0
+EDWSurchargeUSD: 
+EDWContractId: 
+EDWPeriod: 
+EDWSurcharge: 
+EDWAmount: 
+EDWAmountUSD: 
+prestashop_order_id: 41
+vatId: 
+taxRate: 
+taxAmountUSD: 0.00
+taxChargeAmount: 0.00
+authKey: c3f97d94e16615c93305e2224a4d5fa4
+transactionType: CHARGE
+plimusNode: 99
+bluesnapNode: 99
+couponCode: 
+licenseKey: 
+cvvSent: Y
+avsSent: N
+avsResponse: Issuer unavailable or AVS not supported (US Issuer) 
+cvvResponse: Not processed 
+transactionDate: 08/08/2014 09:33 AM
+GET:
+fc: module
+module: bluesnap
+controller: buynow
+ - 2014-08-08 12:33:02
+POST:
+invoiceState: AR
+invoiceCountry: US
+invoiceCompany: 
+invoiceExtension: 
+invoiceCity: 
+invoiceAddress1: 
+invoiceAddress2: 
+invoiceTitle: 
+invoiceFaxNumber: 
+invoiceEmail: alexandr.simonchik@gmail1.com
+invoiceWorkPhone: 
+invoiceFirstName: Alexander
+invoiceMobilePhone: 
+invoiceLastName: Simonchik
+invoiceZipCode: 
+lastName: Simonchik
+accountId: 19560030
+state: AR
+brazilianId: 
+address1: 
+address2: 
+homePhone: 
+city: 
+country: US
+extension: 
+username: 14075157076646567893421306400889
+title: 
+faxNumber: 
+mobilePhone: 
+email: alexandr.simonchik@gmail1.com
+company: 
+zipCode: 
+workPhone: 
+firstName: Alexander
+shippingState: AR
+shippingZipCode: 
+shippingMethod: 
+shippingLastName: Simonchik
+shippingAddress1: 
+shippingCountry: US
+shippingAddress2: 
+shippingCity: 
+shippingFirstName: Alexander
+invoiceAmount: 34.00
+referenceNumber: 1008691468
+overridePrice: 34.00
+invoiceAmountUSD: 34.00
+creditCardExpDate: 1/2015
+productId: 299046
+contractPrice: 34.00
+currency: USD
+templateId: 693
+invoiceChargeAmount: 34.00
+contractChargePrice: 34.00
+referrer: 
+remoteAddress: 213.184.226.94
+invoiceChargeCurrency: USD
+testMode: N
+invoiceInfoURL: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=FF0163E6404607261218E8FC56CFF13E&acd=9BA025C2E192DF47
+creditCardLastFourDigits: 1111
+quantity: 1
+contractId: 2150980
+contractOwner: 396972
+language: RUSSIAN
+productName: Cart #42
+contractName: Cart #42
+creditCardType: VISA
+addCD: N
+untilDate: 08/08/2014 09:35 AM
+paymentType: CC
+paymentMethod: CC
+contractLocalPrice: 34.00
+invoiceLocalCurrency: USD
+invoiceURL: https://sandbox.bluesnap.com/jsp/show_invoice.jsp?ref=FF0163E6404607261218E8FC56CFF13E
+invoiceLocalAmount: 34.00
+originalRequestUrl: http://belvg.net/bluesnap_1608/module/bluesnap/checkout
+shopperAdminUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=FF0163E6404607261218E8FC56CFF13E&acd=9BA025C2E192DF47
+shopperOrderUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=FF0163E6404607261218E8FC56CFF13E&acd=9BA025C2E192DF47
+recurringDisclaimer: N
+targetBalance: BLUESNAP_ACCOUNT
+promoteContractsNum: 0
+EDWSurchargeUSD: 
+EDWContractId: 
+EDWPeriod: 
+EDWSurcharge: 
+EDWAmount: 
+EDWAmountUSD: 
+prestashop_order_id: 42
+vatId: 
+taxRate: 
+taxAmountUSD: 0.00
+taxChargeAmount: 0.00
+authKey: 7b82ee05ea82e5fdd81f72542f2f3228
+transactionType: CHARGE
+plimusNode: 99
+bluesnapNode: 99
+couponCode: 
+licenseKey: 
+cvvSent: Y
+avsSent: N
+avsResponse: Issuer unavailable or AVS not supported (US Issuer) 
+cvvResponse: Not processed 
+transactionDate: 08/08/2014 09:35 AM
+GET:
+fc: module
+module: bluesnap
+controller: buynow
+ - 2014-08-08 12:35:32
+POST:
+invoiceState: AR
+invoiceCountry: US
+invoiceCompany: 
+invoiceExtension: 
+invoiceCity: 
+invoiceAddress1: 
+invoiceAddress2: 
+invoiceTitle: 
+invoiceFaxNumber: 
+invoiceEmail: alexandr.simonchik@gmail1.com
+invoiceWorkPhone: 
+invoiceFirstName: Alexander
+invoiceMobilePhone: 
+invoiceLastName: Simonchik
+invoiceZipCode: 
+lastName: Simonchik
+accountId: 19560032
+state: AR
+brazilianId: 
+address1: 
+address2: 
+homePhone: 
+city: 
+country: US
+extension: 
+username: 140751584106912975801511925481477
+title: 
+faxNumber: 
+mobilePhone: 
+email: alexandr.simonchik@gmail1.com
+company: 
+zipCode: 
+workPhone: 
+firstName: Alexander
+shippingState: AR
+shippingZipCode: 
+shippingMethod: 
+shippingLastName: Simonchik
+shippingAddress1: 
+shippingCountry: US
+shippingAddress2: 
+shippingCity: 
+shippingFirstName: Alexander
+invoiceAmount: 34.00
+referenceNumber: 1008691470
+overridePrice: 34.00
+invoiceAmountUSD: 34.00
+creditCardExpDate: 1/2015
+productId: 299046
+contractPrice: 34.00
+currency: USD
+templateId: 693
+invoiceChargeAmount: 34.00
+contractChargePrice: 34.00
+referrer: 
+remoteAddress: 213.184.226.94
+invoiceChargeCurrency: USD
+testMode: N
+invoiceInfoURL: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=FF0163E64046072611E265CCA92C7D5E&acd=6FB63D7D908CC66A
+creditCardLastFourDigits: 1111
+quantity: 1
+contractId: 2150980
+contractOwner: 396972
+language: RUSSIAN
+productName: Cart #43
+contractName: Cart #43
+creditCardType: VISA
+addCD: N
+untilDate: 08/08/2014 09:37 AM
+paymentType: CC
+paymentMethod: CC
+contractLocalPrice: 34.00
+invoiceLocalCurrency: USD
+invoiceURL: https://sandbox.bluesnap.com/jsp/show_invoice.jsp?ref=FF0163E64046072611E265CCA92C7D5E
+invoiceLocalAmount: 34.00
+originalRequestUrl: http://belvg.net/bluesnap_1608/module/bluesnap/checkout
+shopperAdminUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=FF0163E64046072611E265CCA92C7D5E&acd=6FB63D7D908CC66A
+shopperOrderUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=FF0163E64046072611E265CCA92C7D5E&acd=6FB63D7D908CC66A
+recurringDisclaimer: N
+targetBalance: BLUESNAP_ACCOUNT
+promoteContractsNum: 0
+EDWSurchargeUSD: 
+EDWContractId: 
+EDWPeriod: 
+EDWSurcharge: 
+EDWAmount: 
+EDWAmountUSD: 
+prestashop_order_id: 43
+vatId: 
+taxRate: 
+taxAmountUSD: 0.00
+taxChargeAmount: 0.00
+authKey: 5a0cee990cc4715b81fbd73d68c421fa
+transactionType: CHARGE
+plimusNode: 99
+bluesnapNode: 99
+couponCode: 
+licenseKey: 
+cvvSent: Y
+avsSent: N
+avsResponse: Issuer unavailable or AVS not supported (US Issuer) 
+cvvResponse: Not processed 
+transactionDate: 08/08/2014 09:37 AM
+GET:
+fc: module
+module: bluesnap
+controller: buynow
+ - 2014-08-08 12:37:38
+POST:
+invoiceState: 
+invoiceCountry: IL
+invoiceCompany: 
+invoiceExtension: 
+invoiceCity: London
+invoiceAddress1: twgsg 63
+invoiceAddress2: 
+invoiceTitle: 
+invoiceFaxNumber: 
+invoiceEmail: testvs3@plimus.com
+invoiceWorkPhone: 0545555554
+invoiceFirstName: Test
+invoiceMobilePhone: 
+invoiceLastName: test
+invoiceZipCode: 465557
+lastName: test
+accountId: 19560406
+state: 
+brazilianId: 
+address1: twgsg 63
+address2: 
+homePhone: 
+city: London
+country: IL
+extension: 
+username: 1407671006398
+title: 
+faxNumber: 
+mobilePhone: 
+email: testvs3@plimus.com
+company: 
+zipCode: 465557
+workPhone: 0545555554
+firstName: Test
+shippingState: 
+shippingZipCode: 465557
+shippingMethod: 
+shippingLastName: test
+shippingAddress1: twgsg 63
+shippingCountry: IL
+shippingAddress2: 
+shippingCity: London
+shippingFirstName: Test
+invoiceAmount: 1.00
+referenceNumber: 1008698272
+invoiceAmountUSD: 1.00
+creditCardExpDate: 12/2015
+productId: 299046
+contractPrice: 1.00
+currency: ILS
+templateId: -99
+invoiceChargeAmount: 3.71
+contractChargePrice: 3.71
+referrer: 
+remoteAddress: 82.80.22.138
+invoiceChargeCurrency: ILS
+testMode: N
+invoiceInfoURL: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=6C993CEC9118A76FAB325F1D0A59F942&acd=DF3E815467B86598
+creditCardLastFourDigits: 1111
+quantity: 1
+contractId: 2150980
+contractOwner: 396972
+language: ENGLISH
+productName: product
+contractName: Full Version
+creditCardType: VISA
+addCD: N
+untilDate: 08/10/2014 04:44 AM
+paymentType: CC
+paymentMethod: CC
+contractLocalPrice: 1.00
+invoiceLocalCurrency: ILS
+invoiceURL: https://sandbox.bluesnap.com/jsp/show_invoice.jsp?ref=6C993CEC9118A76FAB325F1D0A59F942
+invoiceLocalAmount: 1.00
+originalRequestUrl: https://sandbox.bluesnap.com/jsp/buynow.jsp?contractId=2150980&custom1=11
+shopperAdminUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=6C993CEC9118A76FAB325F1D0A59F942&acd=DF3E815467B86598
+shopperOrderUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=6C993CEC9118A76FAB325F1D0A59F942&acd=DF3E815467B86598
+recurringDisclaimer: N
+targetBalance: BLUESNAP_ACCOUNT
+promoteContractsNum: 0
+EDWSurchargeUSD: 
+EDWContractId: 
+EDWPeriod: 
+EDWSurcharge: 
+EDWAmount: 
+EDWAmountUSD: 
+prestashop_order_id: 11
+vatId: 
+taxRate: 
+taxAmountUSD: 0.00
+taxChargeAmount: 0.00
+authKey: 11dbb9d1e8e63e913f8f7f6742aa247d
+transactionType: CHARGE
+plimusNode: 99
+bluesnapNode: 99
+couponCode: 
+licenseKey: 
+cvvSent: Y
+avsSent: Y
+avsResponse: Issuer unavailable or AVS not supported (US Issuer) 
+cvvResponse: Not processed 
+transactionDate: 08/10/2014 04:44 AM
+GET:
+fc: module
+module: bluesnap
+controller: buynow
+ - 2014-08-10 07:44:37
+POST:
+invoiceState: AR
+invoiceCountry: US
+invoiceCompany: 
+invoiceExtension: 
+invoiceCity: 
+invoiceAddress1: 
+invoiceAddress2: 
+invoiceTitle: 
+invoiceFaxNumber: 
+invoiceEmail: test@plimus.com
+invoiceWorkPhone: 
+invoiceFirstName: Alexander
+invoiceMobilePhone: 
+invoiceLastName: Simonchik
+invoiceZipCode: 
+lastName: Simonchik
+accountId: 19560408
+state: AR
+brazilianId: 
+address1: 
+address2: 
+homePhone: 
+city: 
+country: US
+extension: 
+username: 140767132195813933624271054324030
+title: 
+faxNumber: 
+mobilePhone: 
+email: test@plimus.com
+company: 
+zipCode: 
+workPhone: 
+firstName: Alexander
+shippingState: AR
+shippingZipCode: 
+shippingMethod: 
+shippingLastName: Simonchik
+shippingAddress1: 
+shippingCountry: US
+shippingAddress2: 
+shippingCity: 
+shippingFirstName: Alexander
+invoiceAmount: 1.00
+referenceNumber: 1008698274
+overridePrice: 0.00
+invoiceAmountUSD: 1.00
+creditCardExpDate: 1/2015
+productId: 299046
+contractPrice: 1.00
+currency: USD
+templateId: 693
+invoiceChargeAmount: 1.00
+contractChargePrice: 1.00
+referrer: 
+remoteAddress: 82.80.22.138
+invoiceChargeCurrency: USD
+testMode: N
+invoiceInfoURL: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=6C993CEC9118A76F82804D068FF925A1&acd=D980E4696F0F5986
+creditCardLastFourDigits: 1111
+quantity: 1
+contractId: 2150980
+contractOwner: 396972
+language: HEBREW
+productName: product
+contractName: Full Version
+creditCardType: VISA
+addCD: N
+untilDate: 08/10/2014 04:48 AM
+paymentType: CC
+paymentMethod: CC
+contractLocalPrice: 1.00
+invoiceLocalCurrency: USD
+invoiceURL: https://sandbox.bluesnap.com/jsp/show_invoice.jsp?ref=6C993CEC9118A76F82804D068FF925A1
+invoiceLocalAmount: 1.00
+originalRequestUrl: 
+shopperAdminUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=6C993CEC9118A76F82804D068FF925A1&acd=D980E4696F0F5986
+shopperOrderUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=6C993CEC9118A76F82804D068FF925A1&acd=D980E4696F0F5986
+recurringDisclaimer: N
+targetBalance: BLUESNAP_ACCOUNT
+promoteContractsNum: 0
+EDWSurchargeUSD: 
+EDWContractId: 
+EDWPeriod: 
+EDWSurcharge: 
+EDWAmount: 
+EDWAmountUSD: 
+prestashop_order_id: CUFZWRCQI
+vatId: 
+taxRate: 
+taxAmountUSD: 0.00
+taxChargeAmount: 0.00
+authKey: d290f43332fb0a5b53a1d63ee66cc8ad
+transactionType: CHARGE
+plimusNode: 99
+bluesnapNode: 99
+couponCode: 
+licenseKey: 
+cvvSent: Y
+avsSent: N
+avsResponse: Issuer unavailable or AVS not supported (US Issuer) 
+cvvResponse: Not processed 
+transactionDate: 08/10/2014 04:48 AM
+GET:
+fc: module
+module: bluesnap
+controller: buynow
+ - 2014-08-10 07:48:46
+POST:
+invoiceState: AR
+invoiceCountry: US
+invoiceCompany: 
+invoiceExtension: 
+invoiceCity: 
+invoiceAddress1: 
+invoiceAddress2: 
+invoiceTitle: 
+invoiceFaxNumber: 
+invoiceEmail: alexandr.simonchik@gmail1.com
+invoiceWorkPhone: 
+invoiceFirstName: Alexander
+invoiceMobilePhone: 
+invoiceLastName: Simonchik
+invoiceZipCode: 
+lastName: Simonchik
+accountId: 19560488
+state: AR
+brazilianId: 
+address1: 
+address2: 
+homePhone: 
+city: 
+country: US
+extension: 
+username: 140773841215220568377311227822165
+title: 
+faxNumber: 
+mobilePhone: 
+email: alexandr.simonchik@gmail1.com
+company: 
+zipCode: 
+workPhone: 
+firstName: Alexander
+shippingState: AR
+shippingZipCode: 
+shippingMethod: 
+shippingLastName: Simonchik
+shippingAddress1: 
+shippingCountry: US
+shippingAddress2: 
+shippingCity: 
+shippingFirstName: Alexander
+invoiceAmount: 33.00
+referenceNumber: 1008698368
+overridePrice: 33.00
+invoiceAmountUSD: 33.00
+creditCardExpDate: 1/2015
+productId: 299046
+contractPrice: 33.00
+currency: USD
+templateId: 693
+invoiceChargeAmount: 33.00
+contractChargePrice: 33.00
+referrer: 
+remoteAddress: 213.184.226.94
+invoiceChargeCurrency: USD
+testMode: N
+invoiceInfoURL: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=89B533D64CF5AD621218E8FC56CFF13E&acd=403DED989316438D
+creditCardLastFourDigits: 1111
+quantity: 1
+contractId: 2150980
+contractOwner: 396972
+language: RUSSIAN
+productName: Cart #27
+contractName: Cart #27
+creditCardType: VISA
+addCD: N
+untilDate: 08/10/2014 11:26 PM
+paymentType: CC
+paymentMethod: CC
+contractLocalPrice: 33.00
+invoiceLocalCurrency: USD
+invoiceURL: https://sandbox.bluesnap.com/jsp/show_invoice.jsp?ref=89B533D64CF5AD621218E8FC56CFF13E
+invoiceLocalAmount: 33.00
+originalRequestUrl: http://belvg.net/bluesnap_1608/module/bluesnap/checkout
+shopperAdminUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=89B533D64CF5AD621218E8FC56CFF13E&acd=403DED989316438D
+shopperOrderUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=89B533D64CF5AD621218E8FC56CFF13E&acd=403DED989316438D
+recurringDisclaimer: N
+targetBalance: BLUESNAP_ACCOUNT
+promoteContractsNum: 0
+EDWSurchargeUSD: 
+EDWContractId: 
+EDWPeriod: 
+EDWSurcharge: 
+EDWAmount: 
+EDWAmountUSD: 
+prestashop_order_id: 27
+vatId: 
+taxRate: 
+taxAmountUSD: 0.00
+taxChargeAmount: 0.00
+authKey: a48fa648306294d9ae36da956e27965f
+transactionType: CHARGE
+plimusNode: 99
+bluesnapNode: 99
+couponCode: 
+licenseKey: 
+cvvSent: Y
+avsSent: N
+avsResponse: Issuer unavailable or AVS not supported (US Issuer) 
+cvvResponse: Not processed 
+transactionDate: 08/10/2014 11:27 PM
+GET:
+fc: module
+module: bluesnap
+controller: buynow
+ - 2014-08-11 02:27:34
+POST:
+invoiceState: AR
+invoiceCountry: US
+invoiceCompany: 
+invoiceExtension: 
+invoiceCity: 
+invoiceAddress1: 
+invoiceAddress2: 
+invoiceTitle: 
+invoiceFaxNumber: 
+invoiceEmail: alexandr.simonchik@gmail1.com
+invoiceWorkPhone: 
+invoiceFirstName: Alexander
+invoiceMobilePhone: 
+invoiceLastName: Simonchik
+invoiceZipCode: 
+lastName: Simonchik
+accountId: 19560490
+state: AR
+brazilianId: 
+address1: 
+address2: 
+homePhone: 
+city: 
+country: US
+extension: 
+username: 1407738700228978629708762333709
+title: 
+faxNumber: 
+mobilePhone: 
+email: alexandr.simonchik@gmail1.com
+company: 
+zipCode: 
+workPhone: 
+firstName: Alexander
+shippingState: AR
+shippingZipCode: 
+shippingMethod: 
+shippingLastName: Simonchik
+shippingAddress1: 
+shippingCountry: US
+shippingAddress2: 
+shippingCity: 
+shippingFirstName: Alexander
+invoiceAmount: 23.40
+referenceNumber: 1008698370
+overridePrice: 23.40
+invoiceAmountUSD: 23.40
+creditCardExpDate: 1/2015
+productId: 299046
+contractPrice: 23.40
+currency: USD
+templateId: 693
+invoiceChargeAmount: 23.40
+contractChargePrice: 23.40
+referrer: 
+remoteAddress: 213.184.226.94
+invoiceChargeCurrency: USD
+testMode: N
+invoiceInfoURL: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=89B533D64CF5AD6211E265CCA92C7D5E&acd=28331CF2E3AA2E8E
+creditCardLastFourDigits: 1111
+quantity: 1
+contractId: 2150980
+contractOwner: 396972
+language: RUSSIAN
+productName: Cart #44
+contractName: Cart #44
+creditCardType: VISA
+addCD: N
+untilDate: 08/10/2014 11:31 PM
+paymentType: CC
+paymentMethod: CC
+contractLocalPrice: 23.40
+invoiceLocalCurrency: USD
+invoiceURL: https://sandbox.bluesnap.com/jsp/show_invoice.jsp?ref=89B533D64CF5AD6211E265CCA92C7D5E
+invoiceLocalAmount: 23.40
+originalRequestUrl: http://belvg.net/bluesnap_1608/module/bluesnap/checkout
+shopperAdminUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=89B533D64CF5AD6211E265CCA92C7D5E&acd=28331CF2E3AA2E8E
+shopperOrderUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=89B533D64CF5AD6211E265CCA92C7D5E&acd=28331CF2E3AA2E8E
+recurringDisclaimer: N
+targetBalance: BLUESNAP_ACCOUNT
+promoteContractsNum: 0
+EDWSurchargeUSD: 
+EDWContractId: 
+EDWPeriod: 
+EDWSurcharge: 
+EDWAmount: 
+EDWAmountUSD: 
+prestashop_order_id: 44
+vatId: 
+taxRate: 
+taxAmountUSD: 0.00
+taxChargeAmount: 0.00
+authKey: bb3e5b0580b8b52d99fefbaa8b0a8985
+transactionType: CHARGE
+plimusNode: 99
+bluesnapNode: 99
+couponCode: 
+licenseKey: 
+cvvSent: Y
+avsSent: N
+avsResponse: Issuer unavailable or AVS not supported (US Issuer) 
+cvvResponse: Not processed 
+transactionDate: 08/10/2014 11:32 PM
+GET:
+fc: module
+module: bluesnap
+controller: buynow
+ - 2014-08-11 02:32:09
+POST:
+invoiceState: AR
+invoiceCountry: US
+invoiceCompany: 
+invoiceExtension: 
+invoiceCity: 
+invoiceAddress1: 
+invoiceAddress2: 
+invoiceTitle: 
+invoiceFaxNumber: 
+invoiceEmail: alexandr.simonchik@gmail1.com
+invoiceWorkPhone: 
+invoiceFirstName: Alexander
+invoiceMobilePhone: 
+invoiceLastName: Simonchik
+invoiceZipCode: 
+lastName: Simonchik
+accountId: 19560492
+state: AR
+brazilianId: 
+address1: 
+address2: 
+homePhone: 
+city: 
+country: US
+extension: 
+username: 14077399567711604194591503526937
+title: 
+faxNumber: 
+mobilePhone: 
+email: alexandr.simonchik@gmail1.com
+company: 
+zipCode: 
+workPhone: 
+firstName: Alexander
+shippingState: AR
+shippingZipCode: 
+shippingMethod: 
+shippingLastName: Simonchik
+shippingAddress1: 
+shippingCountry: US
+shippingAddress2: 
+shippingCity: 
+shippingFirstName: Alexander
+invoiceAmount: 23.40
+referenceNumber: 1008698372
+overridePrice: 23.40
+invoiceAmountUSD: 23.40
+creditCardExpDate: 1/2015
+productId: 299046
+contractPrice: 23.40
+currency: USD
+templateId: 693
+invoiceChargeAmount: 23.40
+contractChargePrice: 23.40
+referrer: 
+remoteAddress: 213.184.226.94
+invoiceChargeCurrency: USD
+testMode: N
+invoiceInfoURL: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=89B533D64CF5AD62AB325F1D0A59F942&acd=35B4ED9399E03855
+creditCardLastFourDigits: 1111
+quantity: 1
+contractId: 2150980
+contractOwner: 396972
+language: RUSSIAN
+productName: Cart #45
+contractName: Cart #45
+creditCardType: VISA
+addCD: N
+untilDate: 08/10/2014 11:52 PM
+paymentType: CC
+paymentMethod: CC
+contractLocalPrice: 23.40
+invoiceLocalCurrency: USD
+invoiceURL: https://sandbox.bluesnap.com/jsp/show_invoice.jsp?ref=89B533D64CF5AD62AB325F1D0A59F942
+invoiceLocalAmount: 23.40
+originalRequestUrl: http://belvg.net/bluesnap_1608/module/bluesnap/checkout
+shopperAdminUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=89B533D64CF5AD62AB325F1D0A59F942&acd=35B4ED9399E03855
+shopperOrderUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=89B533D64CF5AD62AB325F1D0A59F942&acd=35B4ED9399E03855
+recurringDisclaimer: N
+targetBalance: BLUESNAP_ACCOUNT
+promoteContractsNum: 0
+EDWSurchargeUSD: 
+EDWContractId: 
+EDWPeriod: 
+EDWSurcharge: 
+EDWAmount: 
+EDWAmountUSD: 
+prestashop_order_id: 45
+vatId: 
+taxRate: 
+taxAmountUSD: 0.00
+taxChargeAmount: 0.00
+authKey: e11bfa46ffb3cffe65c305f5bc37e72f
+transactionType: CHARGE
+plimusNode: 99
+bluesnapNode: 99
+couponCode: 
+licenseKey: 
+cvvSent: Y
+avsSent: N
+avsResponse: Issuer unavailable or AVS not supported (US Issuer) 
+cvvResponse: Not processed 
+transactionDate: 08/10/2014 11:52 PM
+GET:
+fc: module
+module: bluesnap
+controller: buynow
+ - 2014-08-11 02:52:59
+POST:
+invoiceState: AR
+invoiceCountry: US
+invoiceCompany: 
+invoiceExtension: 
+invoiceCity: 
+invoiceAddress1: 
+invoiceAddress2: 
+invoiceTitle: 
+invoiceFaxNumber: 
+invoiceEmail: alexandr.simonchik@gmail1.com
+invoiceWorkPhone: 
+invoiceFirstName: Alexander
+invoiceMobilePhone: 
+invoiceLastName: Simonchik
+invoiceZipCode: 
+lastName: Simonchik
+accountId: 19560494
+state: AR
+brazilianId: 
+address1: 
+address2: 
+homePhone: 
+city: 
+country: US
+extension: 
+username: 140774050412714752850971615875936
+title: 
+faxNumber: 
+mobilePhone: 
+email: alexandr.simonchik@gmail1.com
+company: 
+zipCode: 
+workPhone: 
+firstName: Alexander
+shippingState: AR
+shippingZipCode: 
+shippingMethod: 
+shippingLastName: Simonchik
+shippingAddress1: 
+shippingCountry: US
+shippingAddress2: 
+shippingCity: 
+shippingFirstName: Alexander
+invoiceAmount: 34.00
+referenceNumber: 1008698394
+overridePrice: 34.00
+invoiceAmountUSD: 34.00
+creditCardExpDate: 1/2015
+productId: 299046
+contractPrice: 34.00
+currency: USD
+templateId: 693
+invoiceChargeAmount: 34.00
+contractChargePrice: 34.00
+referrer: 
+remoteAddress: 213.184.226.94
+invoiceChargeCurrency: USD
+testMode: N
+invoiceInfoURL: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=89B533D64CF5AD624B7475B496A3036B&acd=2B67621C0593761A
+creditCardLastFourDigits: 1111
+quantity: 1
+contractId: 2150980
+contractOwner: 396972
+language: RUSSIAN
+productName: Cart #46
+contractName: Cart #46
+creditCardType: VISA
+addCD: N
+untilDate: 08/11/2014 12:01 AM
+paymentType: CC
+paymentMethod: CC
+contractLocalPrice: 34.00
+invoiceLocalCurrency: USD
+invoiceURL: https://sandbox.bluesnap.com/jsp/show_invoice.jsp?ref=89B533D64CF5AD624B7475B496A3036B
+invoiceLocalAmount: 34.00
+originalRequestUrl: http://belvg.net/bluesnap_1608/module/bluesnap/checkout
+shopperAdminUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=89B533D64CF5AD624B7475B496A3036B&acd=2B67621C0593761A
+shopperOrderUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=89B533D64CF5AD624B7475B496A3036B&acd=2B67621C0593761A
+recurringDisclaimer: N
+targetBalance: BLUESNAP_ACCOUNT
+promoteContractsNum: 0
+EDWSurchargeUSD: 
+EDWContractId: 
+EDWPeriod: 
+EDWSurcharge: 
+EDWAmount: 
+EDWAmountUSD: 
+prestashop_order_id: 46
+vatId: 
+taxRate: 
+taxAmountUSD: 0.00
+taxChargeAmount: 0.00
+authKey: b0cec5bc3b9064db372afc168a9b0b80
+transactionType: CHARGE
+plimusNode: 99
+bluesnapNode: 99
+couponCode: 
+licenseKey: 
+cvvSent: Y
+avsSent: N
+avsResponse: Issuer unavailable or AVS not supported (US Issuer) 
+cvvResponse: Not processed 
+transactionDate: 08/11/2014 12:02 AM
+GET:
+fc: module
+module: bluesnap
+controller: buynow
+ - 2014-08-11 03:02:09
+POST:
+invoiceState: AR
+invoiceCountry: US
+invoiceCompany: 
+invoiceExtension: 
+invoiceCity: 
+invoiceAddress1: 
+invoiceAddress2: 
+invoiceTitle: 
+invoiceFaxNumber: 
+invoiceEmail: alexandr.simonchik@gmail1.com
+invoiceWorkPhone: 
+invoiceFirstName: Alexander
+invoiceMobilePhone: 
+invoiceLastName: Simonchik
+invoiceZipCode: 
+lastName: Simonchik
+accountId: 19560496
+state: AR
+brazilianId: 
+address1: 
+address2: 
+homePhone: 
+city: 
+country: US
+extension: 
+username: 140774059655416458060041037948817
+title: 
+faxNumber: 
+mobilePhone: 
+email: alexandr.simonchik@gmail1.com
+company: 
+zipCode: 
+workPhone: 
+firstName: Alexander
+shippingState: AR
+shippingZipCode: 
+shippingMethod: 
+shippingLastName: Simonchik
+shippingAddress1: 
+shippingCountry: US
+shippingAddress2: 
+shippingCity: 
+shippingFirstName: Alexander
+invoiceAmount: 23.40
+referenceNumber: 1008698458
+overridePrice: 23.40
+invoiceAmountUSD: 23.40
+creditCardExpDate: 1/2015
+productId: 299046
+contractPrice: 23.40
+currency: USD
+templateId: 693
+invoiceChargeAmount: 23.40
+contractChargePrice: 23.40
+referrer: 
+remoteAddress: 213.184.226.94
+invoiceChargeCurrency: USD
+testMode: N
+invoiceInfoURL: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=B5093487EBEFF3B27F6844C443CE1160&acd=19ABC884F24F72C4
+creditCardLastFourDigits: 1111
+quantity: 1
+contractId: 2150980
+contractOwner: 396972
+language: RUSSIAN
+productName: Cart #47
+contractName: Cart #47
+creditCardType: VISA
+addCD: N
+untilDate: 08/11/2014 12:03 AM
+paymentType: CC
+paymentMethod: CC
+contractLocalPrice: 23.40
+invoiceLocalCurrency: USD
+invoiceURL: https://sandbox.bluesnap.com/jsp/show_invoice.jsp?ref=B5093487EBEFF3B27F6844C443CE1160
+invoiceLocalAmount: 23.40
+originalRequestUrl: http://belvg.net/bluesnap_1608/module/bluesnap/checkout
+shopperAdminUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=B5093487EBEFF3B27F6844C443CE1160&acd=19ABC884F24F72C4
+shopperOrderUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=B5093487EBEFF3B27F6844C443CE1160&acd=19ABC884F24F72C4
+recurringDisclaimer: N
+targetBalance: BLUESNAP_ACCOUNT
+promoteContractsNum: 0
+EDWSurchargeUSD: 
+EDWContractId: 
+EDWPeriod: 
+EDWSurcharge: 
+EDWAmount: 
+EDWAmountUSD: 
+prestashop_order_id: 47
+vatId: 
+taxRate: 
+taxAmountUSD: 0.00
+taxChargeAmount: 0.00
+authKey: de6930019bac745b85cc4d4e6166b5b1
+transactionType: CHARGE
+plimusNode: 99
+bluesnapNode: 99
+couponCode: 
+licenseKey: 
+cvvSent: Y
+avsSent: N
+avsResponse: Issuer unavailable or AVS not supported (US Issuer) 
+cvvResponse: Not processed 
+transactionDate: 08/11/2014 12:03 AM
+GET:
+fc: module
+module: bluesnap
+controller: buynow
+ - 2014-08-11 03:03:22
+POST:
+invoiceState: AR
+invoiceCountry: US
+invoiceCompany: 
+invoiceExtension: 
+invoiceCity: 
+invoiceAddress1: 
+invoiceAddress2: 
+invoiceTitle: 
+invoiceFaxNumber: 
+invoiceEmail: alexandr.simonchik@gmail1.com
+invoiceWorkPhone: 
+invoiceFirstName: Alexander
+invoiceMobilePhone: 
+invoiceLastName: Simonchik
+invoiceZipCode: 
+lastName: Simonchik
+accountId: 19560498
+state: AR
+brazilianId: 
+address1: 
+address2: 
+homePhone: 
+city: 
+country: US
+extension: 
+username: 14077409439173000616211873205126
+title: 
+faxNumber: 
+mobilePhone: 
+email: alexandr.simonchik@gmail1.com
+company: 
+zipCode: 
+workPhone: 
+firstName: Alexander
+shippingState: AR
+shippingZipCode: 
+shippingMethod: 
+shippingLastName: Simonchik
+shippingAddress1: 
+shippingCountry: US
+shippingAddress2: 
+shippingCity: 
+shippingFirstName: Alexander
+invoiceAmount: 37.50
+referenceNumber: 1008698748
+overridePrice: 37.50
+invoiceAmountUSD: 37.50
+creditCardExpDate: 1/2015
+productId: 299046
+contractPrice: 37.50
+currency: USD
+templateId: 693
+invoiceChargeAmount: 37.50
+contractChargePrice: 37.50
+referrer: 
+remoteAddress: 213.184.226.94
+invoiceChargeCurrency: USD
+testMode: N
+invoiceInfoURL: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=2B36E7FA06EA6923FF07918DD8A508B6&acd=6DA90C43C12B7FD8
+creditCardLastFourDigits: 1111
+quantity: 1
+contractId: 2150980
+contractOwner: 396972
+language: RUSSIAN
+productName: Cart #48
+contractName: Cart #48
+creditCardType: VISA
+addCD: N
+untilDate: 08/11/2014 12:09 AM
+paymentType: CC
+paymentMethod: CC
+contractLocalPrice: 37.50
+invoiceLocalCurrency: USD
+invoiceURL: https://sandbox.bluesnap.com/jsp/show_invoice.jsp?ref=2B36E7FA06EA6923FF07918DD8A508B6
+invoiceLocalAmount: 37.50
+originalRequestUrl: http://belvg.net/bluesnap_1608/module/bluesnap/checkout
+shopperAdminUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=2B36E7FA06EA6923FF07918DD8A508B6&acd=6DA90C43C12B7FD8
+shopperOrderUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=2B36E7FA06EA6923FF07918DD8A508B6&acd=6DA90C43C12B7FD8
+recurringDisclaimer: N
+targetBalance: BLUESNAP_ACCOUNT
+promoteContractsNum: 0
+EDWSurchargeUSD: 
+EDWContractId: 
+EDWPeriod: 
+EDWSurcharge: 
+EDWAmount: 
+EDWAmountUSD: 
+prestashop_order_id: 48
+vatId: 
+taxRate: 
+taxAmountUSD: 0.00
+taxChargeAmount: 0.00
+authKey: 4c264b4d601b788527496a21104e7e47
+transactionType: CHARGE
+plimusNode: 99
+bluesnapNode: 99
+couponCode: 
+licenseKey: 
+cvvSent: Y
+avsSent: N
+avsResponse: Issuer unavailable or AVS not supported (US Issuer) 
+cvvResponse: Not processed 
+transactionDate: 08/11/2014 12:09 AM
+GET:
+fc: module
+module: bluesnap
+controller: buynow
+ - 2014-08-11 03:09:13
+POST:
+invoiceState: AR
+invoiceCountry: US
+invoiceCompany: 
+invoiceExtension: 
+invoiceCity: 
+invoiceAddress1: 
+invoiceAddress2: 
+invoiceTitle: 
+invoiceFaxNumber: 
+invoiceEmail: alexandr.simonchik@gmail1.com
+invoiceWorkPhone: 
+invoiceFirstName: Alexander
+invoiceMobilePhone: 
+invoiceLastName: Simonchik
+invoiceZipCode: 
+lastName: Simonchik
+accountId: 19560500
+state: AR
+brazilianId: 
+address1: 
+address2: 
+homePhone: 
+city: 
+country: US
+extension: 
+username: 14077414112531995692383643388773
+title: 
+faxNumber: 
+mobilePhone: 
+email: alexandr.simonchik@gmail1.com
+company: 
+zipCode: 
+workPhone: 
+firstName: Alexander
+shippingState: AR
+shippingZipCode: 
+shippingMethod: 
+shippingLastName: Simonchik
+shippingAddress1: 
+shippingCountry: US
+shippingAddress2: 
+shippingCity: 
+shippingFirstName: Alexander
+invoiceAmount: 34.00
+referenceNumber: 1008699230
+overridePrice: 34.00
+invoiceAmountUSD: 34.00
+creditCardExpDate: 1/2015
+productId: 299046
+contractPrice: 34.00
+currency: USD
+templateId: 693
+invoiceChargeAmount: 34.00
+contractChargePrice: 34.00
+referrer: 
+remoteAddress: 213.184.226.94
+invoiceChargeCurrency: USD
+testMode: N
+invoiceInfoURL: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=DDC6DFB67F646917EDF524CEF3CB169C&acd=5461ACB9AC04DFC0
+creditCardLastFourDigits: 1111
+quantity: 1
+contractId: 2150980
+contractOwner: 396972
+language: RUSSIAN
+productName: Cart #49
+contractName: Cart #49
+creditCardType: VISA
+addCD: N
+untilDate: 08/11/2014 12:16 AM
+paymentType: CC
+paymentMethod: CC
+contractLocalPrice: 34.00
+invoiceLocalCurrency: USD
+invoiceURL: https://sandbox.bluesnap.com/jsp/show_invoice.jsp?ref=DDC6DFB67F646917EDF524CEF3CB169C
+invoiceLocalAmount: 34.00
+originalRequestUrl: http://belvg.net/bluesnap_1608/module/bluesnap/checkout
+shopperAdminUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=DDC6DFB67F646917EDF524CEF3CB169C&acd=5461ACB9AC04DFC0
+shopperOrderUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=DDC6DFB67F646917EDF524CEF3CB169C&acd=5461ACB9AC04DFC0
+recurringDisclaimer: N
+targetBalance: BLUESNAP_ACCOUNT
+promoteContractsNum: 0
+EDWSurchargeUSD: 
+EDWContractId: 
+EDWPeriod: 
+EDWSurcharge: 
+EDWAmount: 
+EDWAmountUSD: 
+prestashop_order_id: 49
+vatId: 
+taxRate: 
+taxAmountUSD: 0.00
+taxChargeAmount: 0.00
+authKey: 818c87198474f62e9b7b40a8ab220d6b
+transactionType: CHARGE
+plimusNode: 99
+bluesnapNode: 99
+couponCode: 
+licenseKey: 
+cvvSent: Y
+avsSent: N
+avsResponse: Issuer unavailable or AVS not supported (US Issuer) 
+cvvResponse: Not processed 
+transactionDate: 08/11/2014 12:17 AM
+GET:
+fc: module
+module: bluesnap
+controller: buynow
+ - 2014-08-11 03:17:08
+POST:
+lastName: Simonchik
+accountId: 19560498
+state: AR
+brazilianId: 
+address1: 
+address2: 
+homePhone: 
+city: 
+country: US
+extension: 
+username: 14077409439173000616211873205126
+title: 
+faxNumber: 
+mobilePhone: 
+email: alexandr.simonchik@gmail1.com
+company: 
+zipCode: 
+workPhone: 
+firstName: Alexander
+invoiceState: AR
+invoiceCountry: US
+invoiceCompany: 
+invoiceExtension: 
+invoiceCity: 
+invoiceAddress1: 
+invoiceAddress2: 
+invoiceTitle: 
+invoiceFaxNumber: 
+invoiceEmail: alexandr.simonchik@gmail1.com
+invoiceWorkPhone: 
+invoiceFirstName: Alexander
+invoiceMobilePhone: 
+invoiceLastName: Simonchik
+invoiceZipCode: 
+shippingState: AR
+shippingZipCode: 
+shippingMethod: 
+shippingLastName: Simonchik
+shippingAddress1: 
+shippingCountry: US
+shippingAddress2: 
+shippingCity: 
+shippingFirstName: Alexander
+taxRate: 
+taxAmountUSD: 0.00
+taxChargeAmount: 0.00
+vatId: 
+authKey: 4c264b4d601b788527496a21104e7e47
+paymentType: CC
+paymentMethod: CC
+plimusNode: 99
+bluesnapNode: 99
+transactionType: CANCELLATION_REFUND
+untilDate: 08/11/2014 12:09 AM
+invoiceURL: https://sandbox.bluesnap.com/jsp/show_invoice.jsp?ref=2B36E7FA06EA6923FF07918DD8A508B6
+originalRequestUrl: http://belvg.net/bluesnap_1608/module/bluesnap/checkout
+shopperAdminUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=2B36E7FA06EA6923FF07918DD8A508B6&acd=6DA90C43C12B7FD8
+shopperOrderUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=2B36E7FA06EA6923FF07918DD8A508B6&acd=6DA90C43C12B7FD8
+invoiceAmount: -37.50
+referenceNumber: 1008698748
+reversalRefNum: 1008699554
+creditCardExpDate: 1/2015
+invoiceAmountUSD: -37.50
+currency: USD
+contractChargePrice: 37.50
+invoiceChargeAmount: -37.50
+testMode: N
+creditCardLastFourDigits: 1111
+contractId: 2150980
+quantity: 1
+reversalReason: Per your instructions
+contractPrice: 37.50
+productId: 299046
+templateId: 693
+referrer: 
+remoteAddress: 213.184.226.94
+invoiceChargeCurrency: USD
+invoiceInfoURL: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=2B36E7FA06EA6923FF07918DD8A508B6&acd=6DA90C43C12B7FD8
+contractOwner: 396972
+language: RUSSIAN
+contractName: Full Version
+productName: product
+creditCardType: VISA
+prestashop_order_id: 48
+targetBalance: BLUESNAP_ACCOUNT
+promoteContractsNum: 0
+addCD: N
+EDWSurchargeUSD: 
+EDWContractId: 
+EDWPeriod: 
+EDWSurcharge: 
+EDWAmount: 
+EDWAmountUSD: 
+cancelReason: Per your instructions
+licenseKey: 
+fullRefund: Y
+transactionDate: 08/11/2014 12:21 AM
+GET:
+fc: module
+module: bluesnap
+controller: buynow
+ - 2014-08-11 03:21:09
+POST:
+invoiceState: AR
+invoiceCountry: US
+invoiceCompany: 
+invoiceExtension: 
+invoiceCity: 
+invoiceAddress1: 
+invoiceAddress2: 
+invoiceTitle: 
+invoiceFaxNumber: 
+invoiceEmail: alexandr.simonchik@gmail1.com
+invoiceWorkPhone: 
+invoiceFirstName: Alexander
+invoiceMobilePhone: 
+invoiceLastName: Simonchik
+invoiceZipCode: 
+lastName: Simonchik
+accountId: 19560512
+state: AR
+brazilianId: 
+address1: 
+address2: 
+homePhone: 
+city: 
+country: US
+extension: 
+username: 1407742277571718395878548250663
+title: 
+faxNumber: 
+mobilePhone: 
+email: alexandr.simonchik@gmail1.com
+company: 
+zipCode: 
+workPhone: 
+firstName: Alexander
+shippingState: AR
+shippingZipCode: 
+shippingMethod: 
+shippingLastName: Simonchik
+shippingAddress1: 
+shippingCountry: US
+shippingAddress2: 
+shippingCity: 
+shippingFirstName: Alexander
+invoiceAmount: 23.40
+referenceNumber: 1008700840
+overridePrice: 23.40
+invoiceAmountUSD: 23.40
+creditCardExpDate: 1/2015
+productId: 299046
+contractPrice: 23.40
+currency: USD
+templateId: 693
+invoiceChargeAmount: 23.40
+contractChargePrice: 23.40
+referrer: 
+remoteAddress: 213.184.226.94
+invoiceChargeCurrency: USD
+testMode: N
+invoiceInfoURL: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=D59A37E4B90B0793DACAA67D243F36E4&acd=3FB4A42B779BEB11
+creditCardLastFourDigits: 1111
+quantity: 1
+contractId: 2150980
+contractOwner: 396972
+language: RUSSIAN
+productName: Cart #51
+contractName: Cart #51
+creditCardType: VISA
+addCD: N
+untilDate: 08/11/2014 12:31 AM
+paymentType: CC
+paymentMethod: CC
+contractLocalPrice: 23.40
+invoiceLocalCurrency: USD
+invoiceURL: https://sandbox.bluesnap.com/jsp/show_invoice.jsp?ref=D59A37E4B90B0793DACAA67D243F36E4
+invoiceLocalAmount: 23.40
+originalRequestUrl: http://belvg.net/bluesnap_1608/module/bluesnap/checkout
+shopperAdminUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=D59A37E4B90B0793DACAA67D243F36E4&acd=3FB4A42B779BEB11
+shopperOrderUrl: https://sandbox.bluesnap.com/jsp/order_locator_info.jsp?refId=D59A37E4B90B0793DACAA67D243F36E4&acd=3FB4A42B779BEB11
+recurringDisclaimer: N
+targetBalance: BLUESNAP_ACCOUNT
+promoteContractsNum: 0
+EDWSurchargeUSD: 
+EDWContractId: 
+EDWPeriod: 
+EDWSurcharge: 
+EDWAmount: 
+EDWAmountUSD: 
+prestashop_order_id: 51
+vatId: 
+taxRate: 
+taxAmountUSD: 0.00
+taxChargeAmount: 0.00
+authKey: c350b5bdf07b1d03aca698b24c22016d
+transactionType: CHARGE
+plimusNode: 99
+bluesnapNode: 99
+couponCode: 
+licenseKey: 
+cvvSent: Y
+avsSent: N
+avsResponse: Issuer unavailable or AVS not supported (US Issuer) 
+cvvResponse: Not processed 
+transactionDate: 08/11/2014 12:31 AM
+GET:
+fc: module
+module: bluesnap
+controller: buynow
+ - 2014-08-11 03:31:44

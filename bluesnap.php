@@ -109,7 +109,7 @@ class Bluesnap extends PaymentModule {
 	{
 		$this->name = 'bluesnap';
 		$this->tab = 'payments_gateways';
-		$this->version = '1.6.1';
+		$this->version = '1.6.2.2';
 		$this->author = 'BelVG';
 		$this->need_instance = 1;
 		$this->is_configurable = 1;
@@ -177,7 +177,7 @@ class Bluesnap extends PaymentModule {
 
 		if (!Db::getInstance()->Execute('CREATE TABLE IF NOT EXISTS `'._DB_PREFIX_.'bluesnap_order` (
                 `id_bluesnap_order` int(11) unsigned NOT NULL AUTO_INCREMENT,
-                `prestashop_reference` varchar(9) NULL,
+                `id_cart` int(11) unsigned NOT NULL,
                 `bluesnap_reference` int(11) NOT NULL,
                 `refunded` tinyint(1) NOT NULL,
                 PRIMARY KEY (`id_bluesnap_order`)
@@ -533,7 +533,7 @@ class Bluesnap extends PaymentModule {
 		if (Tools::isSubmit('id_order'))
 		{
 			$order_obj = new Order(Tools::getValue('id_order'));
-			$bluesnap_info = BluesnapOrder::getByPsOrderReference($order_obj->reference);
+			$bluesnap_info = BluesnapOrder::getByPsCartId($order_obj->id_cart);
 			if (isset($bluesnap_info['bluesnap_reference']) && !empty($bluesnap_info['bluesnap_reference']))
 			{
 				$this->context->smarty->assign(array(
@@ -585,36 +585,34 @@ class Bluesnap extends PaymentModule {
 	 * @param $id_order
 	 * @return string
 	 */
-	public function getCheckoutUrl($id_order)
+	public function getCheckoutUrl()
 	{
-		$order_obj = new Order($id_order);
 		if ($this->getConfig('SANDBOX'))
 			$bluesnap_url = self::SANDBOX_CHECKOUT_URL;
 		else
 			$bluesnap_url = self::CHECKOUT_URL;
 
 		$bluesnap_url .= '?';
-		$currency = Currency::getCurrency($order_obj->id_currency);
+		$currency = Currency::getCurrency($this->context->cart->id_currency);
 		$bluesnap_params = array(
 			'storeId' => (int)$this->getConfig('STORE'),
 			'currency' => $currency['iso_code'],
 			'email' => Context::getContext()->cookie->email,
 			//'language' => Context::getContext()->language->name,
 			'sku'.$this->getConfig('CONTRACT') => 1,
-			'custom1' => $order_obj->reference,
+			'custom1' => $this->context->cart->id,
 		);
 		if ($api_lang = BluesnapApi::getLangByIso(Context::getContext()->language->iso_code))
 			$bluesnap_params['language'] = $api_lang;
 
-		$this->billingAddressParams($order_obj, $bluesnap_params);
-		//$this->shippingAddressParams($order_obj, $bluesnap_params);
+		$this->billingAddressParams($this->context->cart, $bluesnap_params);
+		//$this->shippingAddressParams($this->context->cart, $bluesnap_params);
 
 		$bluesnap_url .= http_build_query($bluesnap_params, '', '&');
 		$enc = $this->api->paramEncryption(
 				array(
-					"sku{$this->getConfig('CONTRACT')}priceamount" =>
-					$this->getAmountByReference($order_obj->reference),
-					"sku{$this->getConfig('CONTRACT')}name" => $this->getOrderItemOverrideName($order_obj),
+					"sku{$this->getConfig('CONTRACT')}priceamount" => $this->context->cart->getOrderTotal(),
+					"sku{$this->getConfig('CONTRACT')}name" => $this->getCartItemOverrideName($this->context->cart),
 					"sku{$this->getConfig('CONTRACT')}pricecurrency" => $currency['iso_code'],
 					'expirationInMinutes' => 90,
 		));
@@ -623,9 +621,9 @@ class Bluesnap extends PaymentModule {
 		return $bluesnap_url;
 	}
 
-	public function billingAddressParams($order_obj, &$bluesnap_params)
+	public function billingAddressParams($cart_obj, &$bluesnap_params)
 	{
-		$invoice_address = new Address($order_obj->id_address_invoice);
+		$invoice_address = new Address($cart_obj->id_address_invoice);
 		$country = new Country($invoice_address->id_country);
 		$state = new State($invoice_address->id_state);
 
@@ -639,9 +637,9 @@ class Bluesnap extends PaymentModule {
 		//$bluesnap_params['phone'] = isset($invoice_address->phone_mobile) ? $invoice_address->phone_mobile : $invoice_address->phone;
 	}
 
-	public function shippingAddressParams($order_obj, &$bluesnap_params)
+	public function shippingAddressParams($cart_obj, &$bluesnap_params)
 	{
-		$delivery_address = new Address($order_obj->id_address_delivery);
+		$delivery_address = new Address($cart_obj->id_address_delivery);
 		$country = new Country($delivery_address->id_country);
 		$state = new State($delivery_address->id_state);
 
@@ -661,9 +659,20 @@ class Bluesnap extends PaymentModule {
 	 * @param Order $order
 	 * @return string
 	 */
-	private function getOrderItemOverrideName(Order $order)
+	/*private function getOrderItemOverrideName(Order $order)
 	{
 		return $this->l('Order reference #').$order->reference;
+	}*/
+
+	/**
+	 * return string for custom1 param (prestashop_order_id)
+	 *
+	 * @param Cart $order
+	 * @return string
+	 */
+	private function getCartItemOverrideName(Cart $cart)
+	{
+		return $this->l('Cart #').$cart->id;
 	}
 
 	/**
@@ -672,7 +681,7 @@ class Bluesnap extends PaymentModule {
 	 * @param Order $order
 	 * @return string
 	 */
-	private function getAmountByReference($reference)
+	/*private function getAmountByReference($reference)
 	{
 		$orders_collection = Order::getByReference($reference);
 		$amount = 0;
@@ -680,7 +689,7 @@ class Bluesnap extends PaymentModule {
 			$amount += $order->total_paid;
 
 		return $amount;
-	}
+	}*/
 
 	/**
 	 * save log file

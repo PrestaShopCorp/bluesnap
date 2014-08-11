@@ -12,7 +12,7 @@
  * obtain it through the world-wide-web, please send an email
  * to license@prestashop.com so we can send you a copy immediately.
  *
- *         DISCLAIMER   *
+ *		   DISCLAIMER	*
  * ***************************************
  * Do not edit or add to this file if you wish to upgrade Prestashop to newer
  * versions in the future.
@@ -85,19 +85,9 @@ ModuleFrontController {
 
 		if (Tools::getValue('confirm'))
 		{
-			$customer = new Customer($this->context->cart->id_customer);
-			if (!Validate::isLoadedObject($customer))
-				Tools::redirectLink(__PS_BASE_URI__.'order.php?step=1');
-
-			$total = $this->context->cart->getOrderTotal(true, Cart::BOTH);
-			$this->module->validateOrder((int)$this->context->cart->id,
-					Configuration::get('BS_OS_WAITING'), $total, $this->module->displayName, null, array(), null, false,
-					$customer->secure_key);
-
 			$this->context->smarty->assign(array(
-				'bluesnap_iframe_url' => $this->module->getCheckoutUrl($this->module->currentOrder),
+				'bluesnap_iframe_url' => $this->module->getCheckoutUrl(),
 			));
-
 			$this->assignSummaryInformations();
 			$this->setTemplate('iframe.tpl');
 		}
