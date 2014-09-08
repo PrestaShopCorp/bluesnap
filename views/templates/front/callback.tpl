@@ -28,8 +28,8 @@
 
 <script type="text/javascript">
     if (window.parent) {
-        window.parent.document.location.href='{$bluesnap_order_confirmation_url|escape:'htmlall':'UTF-8'}';
+        window.parent.document.location.href='{$bluesnap_order_confirmation_url}';
     } else {
-        document.location.href = '{$bluesnap_order_confirmation_url|escape:'htmlall':'UTF-8'}';
+        document.location.href = '{$bluesnap_order_confirmation_url}';
     }
 </script>

@@ -53,6 +53,7 @@ class Bluesnap extends PaymentModule {
 		'payment',
 		'adminOrder',
 		'BackOfficeHeader',
+		'displayOrderConfirmation',
 	);
 
 	protected $html = '';
@@ -704,6 +705,11 @@ class Bluesnap extends PaymentModule {
 
 		$file = dirname(__FILE__).DS.$file;
 		file_put_contents($file, $string.' - '.date('Y-m-d H:i:s')."\n", FILE_APPEND | LOCK_EX);
+	}
+
+	public function hookDisplayOrderConfirmation($params)
+	{
+
 	}
 
 }

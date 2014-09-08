@@ -81,7 +81,12 @@ class BluesnapCallbackModuleFrontController extends
 		}
 
 		$this->context->smarty->assign(array(
-			'bluesnap_order_confirmation_url' => Context::getContext()->link->getPageLink('order-confirmation')
+			'bluesnap_order_confirmation_url' => Context::getContext()->link->getPageLink('order-confirmation', NULL, NULL, array(
+				'id_order' => $this->module->currentOrder, 
+				'id_cart' => $id_cart,
+				'id_module' => $this->module->id, 
+				'key' => $order_obj->secure_key,
+				))
 		));
 
 		$this->setTemplate('callback.tpl');
