@@ -39,8 +39,8 @@ require_once _PS_MODULE_DIR_.'bluesnap/includer.php';
 class Bluesnap extends PaymentModule {
 
 	const PREFIX = 'BLUESNAP_';
-	const SANDBOX_CHECKOUT_URL = 'https://sandbox.bluesnap.com/buynow/checkout';
-	const CHECKOUT_URL = 'https://www.bluesnap.com/buynow/checkout';
+	const SANDBOX_CHECKOUT_URL = 'https://sandbox.plimus.com/buynow/checkout';
+	const CHECKOUT_URL = 'https://www.plimus.com/buynow/checkout';
 	const LOG_FILE = 'log/bluesnap.log';
 
 	/**
@@ -709,7 +709,20 @@ class Bluesnap extends PaymentModule {
 
 	public function hookDisplayOrderConfirmation($params)
 	{
-
+		if (!isset($params['objOrder']) || ($params['objOrder']->module != $this->name))
+			return false;
+		if (isset($params['objOrder']) && Validate::isLoadedObject($params['objOrder']) && isset($params['objOrder']->valid) &&
+				version_compare(_PS_VERSION_, '1.5', '>=') && isset($params['objOrder']->reference))
+		{
+			$this->smarty->assign('bluesnap_order', array(
+				'id' => $params['objOrder']->id, 
+				'reference' => $params['objOrder']->reference, 
+				'valid' => $params['objOrder']->valid, 
+				'total_to_pay' => Tools::displayPrice($params['total_to_pay'], $params['currencyObj'], false)
+				)
+			);
+			return $this->display(__FILE__, $this->getTemplate('front', 'order-confirmation.tpl'));
+		}
 	}
 
 }

@@ -34,9 +34,9 @@ require_once _PS_MODULE_DIR_.'bluesnap/includer.php';
  */
 class BluesnapApi {
 
-	const API_BASE_URL_SANDBOX = 'https://sandbox.bluesnap.com/services';
-	const API_BASE_URL = 'https://www.bluesnap.com/services';
-	const XML_NS = 'http://ws.bluesnap.com';
+	const API_BASE_URL_SANDBOX = 'https://sandbox.plimus.com/services';
+	const API_BASE_URL = 'https://www.plimus.com/services';
+	const XML_NS = 'http://ws.plimus.com';
 	const VERSION = '2';
 	const HTTP_METHOD_POST = 0;
 	const HTTP_METHOD_PUT = 1;
