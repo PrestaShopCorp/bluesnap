@@ -39,8 +39,8 @@ require_once _PS_MODULE_DIR_.'bluesnap/includer.php';
 class Bluesnap extends PaymentModule {
 
 	const PREFIX = 'BLUESNAP_';
-	const SANDBOX_CHECKOUT_URL = 'https://sandbox.plimus.com/buynow/checkout';
-	const CHECKOUT_URL = 'https://www.plimus.com/buynow/checkout';
+	const SANDBOX_CHECKOUT_URL = 'https://sandbox.bluesnap.com/buynow/checkout';
+	const CHECKOUT_URL = 'https://checkout.bluesnap.com/buynow/checkout';
 	const LOG_FILE = 'log/bluesnap.log';
 
 	/**
