@@ -60,6 +60,7 @@
 			<ul class="bluesnap-desc-list bluesnap-desc-list-alt">
 				<li class="bluesnap-desc-list-item"><a href="http://www.bluesnap.com/ecommerce/partner-referral-prestashop" target="_blank"><b>{l s='Sign up' mod='bluesnap'}</b></a> {l s='with us and get your BlueSnap credentials' mod='bluesnap'}</li>
 				<li class="bluesnap-desc-list-item">{l s='Follow this' mod='bluesnap'} <a href="http://bluesnap.com/files/prestashop_integration_module.pdf" target="_blank"><b>{l s='Integration Guide' mod='bluesnap'}</b></a> {l s='to setup the BlueSnap module' mod='bluesnap'}</li>
+				<li class="bluesnap-desc-list-item">{l s='Configure your' mod='bluesnap'} <a href="http://home.bluesnap.com/userguide/default.htm#WordManual/BuyNow Page Customization.htm" target="_blank"><b>{l s='callback URL' mod='bluesnap'}</b></a> {l s='and' mod='bluesnap'} <a href="http://home.bluesnap.com/integrationguide/default.htm#WordManual/Setting%20Up%20an%20IPN.htm%3FTocPath%3DInstant%2520Notifications%2520(IPN)%7C_____3" target="_blank"><b>{l s='IPN URL' mod='bluesnap'}</b></a> {l s='in your BlueSnap account' mod='bluesnap'}</li>
 				<li class="bluesnap-desc-list-item">{l s='Start accepting payments with BlueSnap' mod='bluesnap'}</li>
 			</ul>
 		</div>

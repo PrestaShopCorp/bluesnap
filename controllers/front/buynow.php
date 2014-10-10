@@ -52,7 +52,7 @@ class BluesnapBuynowModuleFrontController extends
 			if ($ipn_model->processTransactionRequest())
 				echo $ipn_model->getOkResponseString();
 		} catch (Exception $e) {
-			bluesnap::log('IPN exception: '.$e->getMessage());
+			Bluesnap::log('IPN exception: '.$e->getMessage());
 		}
 
 		die();

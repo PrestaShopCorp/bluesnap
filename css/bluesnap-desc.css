@@ -18,6 +18,8 @@
     background: -ms-linear-gradient(top center,#27b0f0,#034dad 60%);
     background: linear-gradient(top center,#27b0f0,#034dad 60%);
 }
+.bluesnap-desc-actions a,
+.bluesnap-desc-actions a:hover,
 .bluesnap-desc-action-link:hover { color: #fff; }
 .bluesnap-desc-action-notice { margin: 6px 0 0; }
 .bluesnap-desc-content { clear: both; border: 2px solid #eaeaea; padding: 24px 0; zoom: 1; }

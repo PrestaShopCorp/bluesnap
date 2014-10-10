@@ -34,8 +34,8 @@ require_once _PS_MODULE_DIR_.'bluesnap/includer.php';
  */
 class BluesnapApi {
 
-	const API_BASE_URL_SANDBOX = 'https://sandbox.plimus.com/services';
-	const API_BASE_URL = 'https://www.plimus.com/services';
+	const API_BASE_URL_SANDBOX = 'https://sandbox.bluesnap.com/services';
+	const API_BASE_URL = 'https://www.bluesnap.com/services';
 	const XML_NS = 'http://ws.plimus.com';
 	const VERSION = '2';
 	const HTTP_METHOD_POST = 0;
@@ -121,9 +121,7 @@ class BluesnapApi {
 	protected function getServiceUrl($service)
 	{
 		$api_url = Configuration::get('BLUESNAP_SANDBOX') ? self::API_BASE_URL_SANDBOX : self::API_BASE_URL;
-		$url = implode('/', array($api_url, self::VERSION, $service));
-
-		return $url;
+		return implode('/', array($api_url, self::VERSION, $service));
 	}
 
 	public function refund($reference_number)
@@ -204,7 +202,7 @@ class BluesnapApi {
 	 */
 	protected function getCurlOptions()
 	{
-		$options = array(
+		return array(
 			CURLOPT_SSLVERSION => 3,
 			CURLOPT_SSL_VERIFYHOST => false,
 			CURLOPT_SSL_VERIFYPEER => false,
@@ -214,8 +212,6 @@ class BluesnapApi {
 			CURLOPT_HTTPHEADER => array('Content-Type: application/xml'),
 			CURLOPT_RETURNTRANSFER => true,
 		);
-
-		return $options;
 	}
 
 	/**

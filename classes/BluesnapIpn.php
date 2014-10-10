@@ -12,7 +12,7 @@
  * obtain it through the world-wide-web, please send an email
  * to license@prestashop.com so we can send you a copy immediately.
  *
- *         DISCLAIMER   *
+ *		   DISCLAIMER	*
  * ***************************************
  * Do not edit or add to this file if you wish to upgrade Prestashop to newer
  * versions in the future.
@@ -41,20 +41,6 @@ class BluesnapIpn extends BluesnapApi {
 	const TRANSACTION_TYPE_CHARGE = 'CHARGE';
 	const TRANSACTION_TYPE_REFUND = 'REFUND';
 	const REFUND_ORDER_STATE = 7;
-
-	/**
-	 * Debug mode on/off
-	 *
-	 * @var
-	 */
-	protected $is_debug_mode;
-
-	/**
-	 * Log path
-	 *
-	 * @var string
-	 */
-	protected $debug_log_name;
 
 	/**
 	 * create Ipn object
@@ -142,26 +128,23 @@ class BluesnapIpn extends BluesnapApi {
 			{
 				//save transactionId
 				$bluesnap_order = new BluesnapOrder();
-				$bluesnap_order->prestashop_reference = $order_increment_id;
+				$bluesnap_order->id_cart = $order_increment_id;
 				$bluesnap_order->bluesnap_reference = Tools::getValue(self::PARAM_REFERENCE_NUMBER);
 				$bluesnap_order->add();
 
-				$orders = Order::getByReference($order_increment_id);
-				foreach ($orders as $obj_order)
+				$obj_order = new Order(Order::getOrderByCartId($order_increment_id));
+				if (!$obj_order->id)
 				{
-					if (!$obj_order->id)
-					{
-						bluesnap::log('Cannot load Order object with reference "'.$order_increment_id.'"');
-						//throw new PrestaShopException('Cannot load Order object');
-						return;
-					}
-
-					$current_order_state = $obj_order->getCurrentOrderState();
-					if ($current_order_state->id != $order_state->id)
-						$this->changeOrderStatus($obj_order, (int)Configuration::get('BS_OS_PAYMENT_VALID'), $this->errors);
-					else
-						$this->errors[] = Tools::displayError('The order has already been assigned this status.');
+					bluesnap::log('IPN error: cannot load Order object with cart_id "'.$order_increment_id.'"');
+					//throw new PrestaShopException('Cannot load Order object');
+					return;
 				}
+
+				$current_order_state = $obj_order->getCurrentOrderState();
+				if ($current_order_state->id != $order_state->id)
+					$this->changeOrderStatus($obj_order, (int)Configuration::get('BS_OS_PAYMENT_VALID'), $this->errors);
+				else
+					$this->errors[] = Tools::displayError('The order has already been assigned this status.');
 			}
 		}
 
@@ -181,7 +164,7 @@ class BluesnapIpn extends BluesnapApi {
 	 * @param $id_status
 	 * @param $errors
 	 */
-	private function changeOrderStatus($obj_order, $id_status, &$errors)
+	public function changeOrderStatus($obj_order, $id_status, &$errors)
 	{
 		// Create new OrderHistory
 		$history = new OrderHistory();

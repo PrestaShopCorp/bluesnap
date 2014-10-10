@@ -55,8 +55,38 @@ class BluesnapCallbackModuleFrontController extends
 	public function initContent()
 	{
 		parent::initContent();
+
+		//create order
+		$customer = new Customer($this->context->cart->id_customer);
+		if (!Validate::isLoadedObject($customer))
+			Tools::redirectLink(__PS_BASE_URI__.'order.php?step=1');
+
+		$id_cart = $this->context->cart->id;
+		$total = $this->context->cart->getOrderTotal(true, Cart::BOTH);
+		$this->module->validateOrder((int)$this->context->cart->id,
+				Configuration::get('BS_OS_WAITING'), $total, $this->module->displayName, null, array(), null, false,
+				$customer->secure_key);
+
+		//change order status if needed
+		$order_obj = new Order($this->module->currentOrder);
+		$order_state_obj = new OrderState(Configuration::get('BS_OS_PAYMENT_VALID'));
+		if ($order_obj->current_state != $order_state_obj->id)
+		{
+			$bluesnap_info = BluesnapOrder::getByPsCartId($id_cart);
+			if (isset($bluesnap_info['bluesnap_reference']) && !empty($bluesnap_info['bluesnap_reference']))
+			{
+				$ipn_obj = new BluesnapIpn();
+				$ipn_obj->changeOrderStatus($order_obj, (int)Configuration::get('BS_OS_PAYMENT_VALID'), $this->errors);
+			}
+		}
+
 		$this->context->smarty->assign(array(
-			'bluesnap_order_confirmation_url' => Context::getContext()->link->getPageLink('order-confirmation')
+			'bluesnap_order_confirmation_url' => Context::getContext()->link->getPageLink('order-confirmation', NULL, NULL, array(
+				'id_order' => $this->module->currentOrder, 
+				'id_cart' => $id_cart,
+				'id_module' => $this->module->id, 
+				'key' => $order_obj->secure_key,
+				))
 		));
 
 		$this->setTemplate('callback.tpl');

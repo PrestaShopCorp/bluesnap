@@ -36,7 +36,7 @@ class BluesnapOrder extends ObjectModel {
 
 	public $id;
 	public $id_bluesnap_order;
-	public $prestashop_reference;
+	public $id_cart;
 	public $bluesnap_reference;
 	public $refunded = 0;
 	public static $definition = array(
@@ -44,19 +44,19 @@ class BluesnapOrder extends ObjectModel {
 		'primary' => 'id_bluesnap_order',
 		'multilang' => false,
 		'fields' => array(
-			'prestashop_reference' => array('type' => self::TYPE_STRING, 'required' => true, 'size' => 9),
+			'id_cart' => array('type' => self::TYPE_INT, 'required' => true),
 			'bluesnap_reference' => array('type' => self::TYPE_INT, 'required' => true),
 			'refunded' => array('type' => self::TYPE_BOOL),
 		),
 	);
 
-	public static function getByPsOrderReference($prestashop_reference, $refunded = false)
+	public static function getByPsCartId($id_cart, $refunded = false)
 	{
 		return Db::getInstance()->getRow(
 			'SELECT * FROM `'._DB_PREFIX_.'bluesnap_order`
 			WHERE 1 '.
 			($refunded ? 'AND refunded != 1 ' : '').'
-			AND prestashop_reference = "'.pSQL($prestashop_reference).'"'
+			AND id_cart = "'.pSQL($id_cart).'"'
 		);
 	}
 
@@ -78,7 +78,7 @@ class BluesnapOrder extends ObjectModel {
         ');
 
 		$order_obj = new Order($id_order);
-		$bluesnap_info = BluesnapOrder::getByPsOrderReference($order_obj->reference);
+		$bluesnap_info = BluesnapOrder::getByPsCartId($order_obj->id_cart);
 		if (isset($bluesnap_info['bluesnap_reference']) && !empty($bluesnap_info['bluesnap_reference']))
 			return $states;
 		else

@@ -24,8 +24,8 @@
 * @license    http://store.belvg.com/BelVG-LICENSE-COMMUNITY.txt
 *}
 
-<div id="order-detail-content" class="grid_9 alpha omega">
-    <table id="cart_summary" class="std">
+<div id="order-detail-content" class="table_block table-responsive">
+    <table id="cart_summary" class="table table-bordered">
     <thead>
     <tr>
         <th class="cart_product first_item">{l s='Product' mod='bluesnap'}</th>
@@ -77,10 +77,12 @@
         </td>
     </tr>
     {if $total_shipping_tax_exc <= 0 && !isset($virtualCart)}
-        <tr class="cart_total_delivery" style="{if !isset($carrier->id) || is_null($carrier->id)}display:none;{/if}">
-            <td colspan="5">{l s='Shipping' mod='bluesnap'}</td>
-            <td colspan="2" class="price" id="total_shipping">{l s='Free Shipping!' mod='bluesnap'}</td>
-        </tr>
+		{if !isset($carrier->id) || is_null($carrier->id)}
+			<tr class="cart_total_delivery">
+				<td colspan="5">{l s='Shipping' mod='bluesnap'}</td>
+				<td colspan="2" class="price" id="total_shipping">{l s='Free Shipping!' mod='bluesnap'}</td>
+			</tr>
+		{/if}
     {else}
         {if $use_taxes && $total_shipping_tax_exc != $total_shipping}
             {if $priceDisplay}
