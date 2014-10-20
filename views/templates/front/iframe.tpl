@@ -48,4 +48,10 @@
 </div>
 
 {include file="./shopping-cart.tpl"}
+{if $bluesnap_iframe_url}
 <iframe width="100%" height="1000px" src="{$bluesnap_iframe_url|escape:'htmlall':'UTF-8'}"></iframe>
+{else}
+    <div class="alert alert-warning">
+        {l s='We can\'t process your payment. Please, contact the store owner.' mod='bluesnap'} {*<a href="{$link->getPageLink('contact')}">{l s='Contact us' mod='bluesnap'}</a>*}
+    </div>
+{/if}
