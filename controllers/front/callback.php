@@ -79,6 +79,7 @@ class BluesnapCallbackModuleFrontController extends
 				$ipn_obj->changeOrderStatus($order_obj, (int)Configuration::get('BS_OS_PAYMENT_VALID'), $this->errors);
 			}
 		}
+		Configuration::updateValue('BLUESNAP_CONFIGURATION_OK', true);
 
 		$this->context->smarty->assign(array(
 			'bluesnap_order_confirmation_url' => Context::getContext()->link->getPageLink('order-confirmation', NULL, NULL, array(
