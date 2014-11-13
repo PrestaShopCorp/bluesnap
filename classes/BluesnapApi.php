@@ -203,7 +203,6 @@ class BluesnapApi {
 	protected function getCurlOptions()
 	{
 		return array(
-			CURLOPT_SSLVERSION => 3,
 			CURLOPT_SSL_VERIFYHOST => false,
 			CURLOPT_SSL_VERIFYPEER => false,
 			CURLOPT_USERAGENT => 'PRESTASHOP STORE',
