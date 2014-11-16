@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <module>
-    <name>bluesnap</name>
-    <displayName><![CDATA[BlueSnap BuyNow]]></displayName>
-    <version><![CDATA[1.6.3]]></version>
-    <description><![CDATA[Accept online payments easily and securely with a smarter payment gateway.  BlueSnap has helped over 5,000 merchants convert more shoppers to buyers worldwide.]]></description>
-    <author><![CDATA[BelVG]]></author>
-    <tab><![CDATA[payments_gateways]]></tab>
-    <is_configurable>1</is_configurable>
-    <need_instance>1</need_instance>
-    <limited_countries></limited_countries>
+	<name>bluesnap</name>
+	<displayName><![CDATA[BlueSnap BuyNow]]></displayName>
+	<version><![CDATA[1.6.4]]></version>
+	<description><![CDATA[Accept online payments easily and securely with a smarter payment gateway.  BlueSnap has helped over 5,000 merchants convert more shoppers to buyers worldwide.]]></description>
+	<author><![CDATA[BelVG]]></author>
+	<tab><![CDATA[payments_gateways]]></tab>
+	<is_configurable>1</is_configurable>
+	<need_instance>1</need_instance>
+	<limited_countries></limited_countries>
 </module>

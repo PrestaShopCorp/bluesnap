@@ -110,7 +110,7 @@ class Bluesnap extends PaymentModule {
 	{
 		$this->name = 'bluesnap';
 		$this->tab = 'payments_gateways';
-		$this->version = '1.6.3';
+		$this->version = '1.6.4';
 		$this->author = 'BelVG';
 		$this->need_instance = 1;
 		$this->is_configurable = 1;
@@ -719,9 +719,9 @@ class Bluesnap extends PaymentModule {
 				version_compare(_PS_VERSION_, '1.5', '>=') && isset($params['objOrder']->reference))
 		{
 			$this->smarty->assign('bluesnap_order', array(
-				'id' => $params['objOrder']->id, 
-				'reference' => $params['objOrder']->reference, 
-				'valid' => $params['objOrder']->valid, 
+				'id' => $params['objOrder']->id,
+				'reference' => $params['objOrder']->reference,
+				'valid' => $params['objOrder']->valid,
 				'total_to_pay' => Tools::displayPrice($params['total_to_pay'], $params['currencyObj'], false)
 				)
 			);
