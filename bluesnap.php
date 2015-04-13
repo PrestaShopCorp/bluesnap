@@ -1,6 +1,6 @@
 <?php
 /**
- * 2007-2014 PrestaShop
+ * 2007-2015 PrestaShop
  *
  * NOTICE OF LICENSE
  *
@@ -21,7 +21,7 @@
  * @category	Belvg
  * @package	Belvg_BlueSnap
  * @author    Alexander Simonchik <support@belvg.com>
- * @copyright Copyright (c) 2010 - 2014 BelVG LLC. (http://www.belvg.com)
+ * @copyright Copyright (c) 2010 - 2015 BelVG LLC. (http://www.belvg.com)
  * @license   http://store.belvg.com/BelVG-LICENSE-COMMUNITY.txt
  */
 
@@ -260,7 +260,7 @@ class Bluesnap extends PaymentModule {
 
 			Configuration::updateValue($key, (int)$order_state->id);
 
-			copy(dirname(__FILE__).'/img/statuses/'.$key.'.gif', dirname(__FILE__).'/../../img/os/'.(int)$order_state->id.'.gif');
+			copy(dirname(__FILE__).'/views/img/statuses/'.$key.'.gif', dirname(__FILE__).'/../../img/os/'.(int)$order_state->id.'.gif');
 		}
 	}
 
@@ -459,6 +459,29 @@ class Bluesnap extends PaymentModule {
 			),
 		);
 
+		$this->fields_form[2]['form'] = array(
+			'tinymce' => true,
+			'legend' => array('title' => $this->l('BlueSnap Exchange Rate API'), 'image' => $this->_path.
+				'logo.gif'),
+			'submit' => array(
+				'name' => 'submitUpdate',
+				'title' => $this->l('   Save   ')
+			),
+			'input' => array(
+				array(
+					'type' => 'switch',
+					'values' => array(
+						array('label' => $this->l('Yes'), 'value' => 1, 'id' => 'bs_exchange_on'),
+						array('label' => $this->l('No'), 'value' => 0, 'id' => 'bs_exchange_off'),
+					),
+					'is_bool' => true,
+					'class' => 't',
+					'label' => $this->l('Use BlueSnap Exchange Rate converter'),
+					'name' => 'use_bs_exchange',
+				),
+			),
+		);
+
 		return $helper;
 	}
 
@@ -506,7 +529,7 @@ class Bluesnap extends PaymentModule {
 	 */
 	public function hookHeader()
 	{
-		$this->context->controller->addCSS(($this->_path).'css/front.css', 'all');
+		$this->context->controller->addCSS(($this->_path).'views/css/front.css', 'all');
 	}
 
 	/**
@@ -553,6 +576,7 @@ class Bluesnap extends PaymentModule {
 		$reference_number = Tools::getValue('bluesnap_reference_number');
 		$id_order = Tools::getValue('id_order');
 		$id_bluesnap_order = Tools::getValue('id_bluesnap_order');
+		$bluesnap_error = false;
 		if ($reference_number && $id_order && $id_bluesnap_order)
 		{
 			$id_order_state = Configuration::get('PS_OS_REFUND');
@@ -577,7 +601,10 @@ class Bluesnap extends PaymentModule {
 					}
 				}
 			}
+			else
+				$bluesnap_error = 'An error has occurred. Please contact BlueSnap support for further assistance';
 		}
+		$this->context->smarty->assign('bluesnap_error', $bluesnap_error);
 	}
 
 	/**
@@ -592,6 +619,20 @@ class Bluesnap extends PaymentModule {
 			$bluesnap_url = self::SANDBOX_CHECKOUT_URL;
 		else
 			$bluesnap_url = self::CHECKOUT_URL;
+
+		$total = $this->context->cart->getOrderTotal(true, Cart::BOTH);
+		$currency_code = $current_currency_code = $this->context->currency->iso_code;
+		$usd_currency_id = Currency::getIdByIsoCode('USD');
+		if (!Currency::isLocallySupported($current_currency_code) && $usd_currency_id)
+		{
+			$currency = Currency::getCurrencyInstance($usd_currency_id);
+			$base = $total / $this->context->currency->conversion_rate;
+			$usd_total = $currency->conversion_rate * $base;
+
+			$c_decimals = (int)$currency->decimals * _PS_PRICE_DISPLAY_PRECISION_;
+			$total = round(Tools::convertPrice($usd_total, $usd_currency_id), $c_decimals);
+			$currency_code = $currency->iso_code;
+		}
 
 		$bluesnap_url .= '?';
 		$currency = Currency::getCurrency($this->context->cart->id_currency);
@@ -612,14 +653,13 @@ class Bluesnap extends PaymentModule {
 		$bluesnap_url .= http_build_query($bluesnap_params, '', '&');
 		$enc = $this->api->paramEncryption(
 				array(
-					"sku{$this->getConfig('CONTRACT')}priceamount" => $this->context->cart->getOrderTotal(),
+					"sku{$this->getConfig('CONTRACT')}priceamount" => $total,
 					"sku{$this->getConfig('CONTRACT')}name" => $this->getCartItemOverrideName($this->context->cart),
-					"sku{$this->getConfig('CONTRACT')}pricecurrency" => $currency['iso_code'],
+					"sku{$this->getConfig('CONTRACT')}pricecurrency" => $currency_code,
 					'expirationInMinutes' => 90,
 		));
-        if (!$enc) {
-            return null;
-        }
+		if (!$enc)
+			return null;
 
 		$bluesnap_url .= '&enc='.$enc;
 

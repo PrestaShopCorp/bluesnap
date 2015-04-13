@@ -1,0 +1,55 @@
+@font-face {
+	font-family: 'montrealts-xlight';
+	src: url('../fonts/montrealts-xlight-webfont.eot');
+	src: url('../fonts/montrealts-xlight-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/montrealts-xlight-webfont.woff') format('woff'),
+		url('../fonts/montrealts-xlight-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'montrealts-light';
+	src: url('../fonts/montrealts-light-webfont.eot');
+	src: url('../fonts/montrealts-light-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/montrealts-light-webfont.woff') format('woff'),
+		url('../fonts/montrealts-light-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'montrealts-regular';
+	src: url('../fonts/montrealts-regular-webfont.eot');
+	src: url('../fonts/montrealts-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/montrealts-regular-webfont.woff') format('woff'),
+		 url('../fonts/montrealts-regular-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+
+}
+@font-face {
+	font-family: 'montrealts-medium';
+	src: url('../fonts/montrealts-medium-webfont.eot');
+	src: url('../fonts/montrealts-medium-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/montrealts-medium-webfont.woff') format('woff'),
+		url('../fonts/montrealts-medium-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'montrealts-demibold';
+	src: url('../fonts/montrealts-demibold-webfont.eot');
+	src: url('../fonts/montrealts-demibold-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/montrealts-demibold-webfont.woff') format('woff'),
+		 url('../fonts/montrealts-demibold-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'montrealts-bold';
+	src: url('../fonts/montrealts-bold-webfont.eot');
+	src: url('../fonts/montrealts-bold-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/montrealts-bold-webfont.woff') format('woff'),
+		 url('../fonts/montrealts-bold-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}

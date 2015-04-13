@@ -1,5 +1,5 @@
 {*
-* 2007-2014 PrestaShop
+* 2007-2015 PrestaShop
 *
 * NOTICE OF LICENSE
 *
@@ -20,25 +20,28 @@
 * @package    Belvg_BlueSnap
 * @author    Alexander Simonchik <support@belvg.com>
 * @site
-* @copyright  Copyright (c) 2010 - 2014 BelVG LLC. (http://www.belvg.com)
+* @copyright  Copyright (c) 2010 - 2015 BelVG LLC. (http://www.belvg.com)
 * @license    http://store.belvg.com/BelVG-LICENSE-COMMUNITY.txt
 *}
 <div class="col-lg-12">
     <div class="panel">
         <fieldset>
             <legend><img src="../img/admin/money.gif">{l s='Full refund via BlueSnap' mod='bluesnap'}</legend>
-
-            {if !$bluesnap_refunded}
-                <form method="post" action="" name="refund">
-                    <div>{l s='BlueSnap order reference number:' mod='bluesnap'} <b>{$bluesnap_reference_number|escape:'htmlall':'UTF-8'}</b></div>
-                    <p></p>
-                    <input type="hidden" name="bluesnap_reference_number" value="{$bluesnap_reference_number|escape:'htmlall':'UTF-8'}" />
-                    <input type="hidden" name="id_bluesnap_order" value="{$id_bluesnap_order|escape:'htmlall':'UTF-8'}" />
-                    <input type="submit" name="process_bluesnap_refund" value ="{l s='Process Full Refund' mod='bluesnap'}" class="btn btn-default" />
-                </form>
-            {else}
-                <div class="alert alert-warning">{l s='Refunded' mod='bluesnap'}</div>
-            {/if}
+			{if $bluesnap_error}
+				<div class="alert alert-danger">{$bluesnap_error|escape:'htmlall':'UTF-8'}</div>
+			{else}
+				{if !$bluesnap_refunded}
+					<form method="post" action="" name="refund">
+						<div>{l s='BlueSnap order reference number:' mod='bluesnap'} <b>{$bluesnap_reference_number|escape:'htmlall':'UTF-8'}</b></div>
+						<p></p>
+						<input type="hidden" name="bluesnap_reference_number" value="{$bluesnap_reference_number|escape:'htmlall':'UTF-8'}" />
+						<input type="hidden" name="id_bluesnap_order" value="{$id_bluesnap_order|escape:'htmlall':'UTF-8'}" />
+						<input type="submit" name="process_bluesnap_refund" value ="{l s='Process Full Refund' mod='bluesnap'}" class="btn btn-default" />
+					</form>
+				{else}
+					<div class="alert alert-warning">{l s='Refunded' mod='bluesnap'}</div>
+				{/if}
+			{/if}
         </fieldset>
 
         {literal}
