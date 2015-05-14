@@ -70,7 +70,7 @@ class BluesnapCallbackModuleFrontController extends
 		//change order status if needed
 		$order_obj = new Order($this->module->currentOrder);
 		$order_state_obj = new OrderState(Configuration::get('BS_OS_PAYMENT_VALID'));
-		if ($order_obj->current_state != $order_state_obj->id)
+		if (Validate::isLoadedObject($order_state_obj) && $order_obj->current_state != $order_state_obj->id)
 		{
 			$ipn_obj = new BluesnapIpn();
 			$ipn_obj->changeOrderStatus($order_obj, (int)Configuration::get('BS_OS_PAYMENT_VALID'), $this->errors);

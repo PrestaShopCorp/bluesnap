@@ -43,6 +43,10 @@ class Bluesnap extends PaymentModule {
 	const CHECKOUT_URL = 'https://checkout.bluesnap.com/buynow/checkout';
 	const LOG_FILE = 'log/bluesnap.log';
 
+	private static $locally_supported = array('USD', 'EUR', 'GBP', 'CAD', 'JPY', 'CHF', 'ARS', 'AUD', 'BRL',
+		'CLP', 'COP', 'HKD', 'HUF', 'INR', 'ILS', 'MYR', 'MXN', 'NZD', 'NOK', 'PLN', 'RUB', 'SAR', 'SGD',
+		'ZAR', 'SEK', 'PEN');
+
 	/**
 	 * hooks uses by module
 	 *
@@ -54,6 +58,7 @@ class Bluesnap extends PaymentModule {
 		'adminOrder',
 		'BackOfficeHeader',
 		'displayOrderConfirmation',
+		'actionObjectCurrencyUpdateBefore',
 	);
 
 	protected $html = '';
@@ -67,13 +72,13 @@ class Bluesnap extends PaymentModule {
 		'USER' => '',
 		'PSWD' => '',
 		'SANDBOX_USER' => '',
-		'SANDBOX_USER' => '',
 		'STORE' => '',
 		'SANDBOX' => 0,
 		'CONTRACT' => '',
 		'PROTECTION_KEY' => '',
 		'BUYNOW_DEBUG_MODE' => '',
 		'API_DEBUG_MODE' => '',
+		'USE_BS_EXCHANGE' => 0,
 	);
 
 	/**
@@ -110,7 +115,7 @@ class Bluesnap extends PaymentModule {
 	{
 		$this->name = 'bluesnap';
 		$this->tab = 'payments_gateways';
-		$this->version = '1.6.4';
+		$this->version = '1.7.0';
 		$this->author = 'BelVG';
 		$this->need_instance = 1;
 		$this->is_configurable = 1;
@@ -260,7 +265,7 @@ class Bluesnap extends PaymentModule {
 
 			Configuration::updateValue($key, (int)$order_state->id);
 
-			copy(dirname(__FILE__).'/views/img/statuses/'.$key.'.gif', dirname(__FILE__).'/../../img/os/'.(int)$order_state->id.'.gif');
+			Tools::copy(dirname(__FILE__).'/views/img/statuses/'.$key.'.gif', _PS_ROOT_DIR_.'/img/os/'.(int)$order_state->id.'.gif');
 		}
 	}
 
@@ -485,6 +490,31 @@ class Bluesnap extends PaymentModule {
 		return $helper;
 	}
 
+	public function refreshCurrencies()
+	{
+		// get shop default currency
+		if (!$default_currency = Currency::getDefaultCurrency())
+			return Tools::displayError('No default currency');
+
+		$default_iso_code = $default_currency->iso_code;
+		$currencies = Currency::getCurrencies(true, false, true);
+
+		/* @var $currency Currency */
+		foreach ($currencies as $currency)
+		{
+			if ($currency->id != $default_currency->id)
+			{
+				if ($conversion_rate = $this->api->getCurrencyRate($default_iso_code, $currency->iso_code))
+				{
+					$currency->conversion_rate = $conversion_rate;
+					$currency->update();
+				}
+			}
+		}
+
+		return null;
+	}
+
 	/**
 	 * PrestaShop way save button
 	 *
@@ -512,7 +542,13 @@ class Bluesnap extends PaymentModule {
 					if (in_array($key, array('sandbox_pswd', 'pswd')) && empty($value))
 						continue;
 
-					self::setConfig($key, $value);
+					if ($key == 'use_bs_exchange')
+						if ($value && !$this->getConfig('USE_BS_EXCHANGE'))
+							$this->refreshCurrencies();
+						elseif (!$value && $this->getConfig('USE_BS_EXCHANGE'))
+							Currency::refreshCurrencies();
+
+						self::setConfig($key, $value);
 				}
 			}
 
@@ -602,9 +638,25 @@ class Bluesnap extends PaymentModule {
 				}
 			}
 			else
-				$bluesnap_error = 'An error has occurred. Please contact BlueSnap support for further assistance';
+				$bluesnap_error = $this->l('An error has occurred. Please contact BlueSnap support for further assistance');
 		}
 		$this->context->smarty->assign('bluesnap_error', $bluesnap_error);
+	}
+
+	public function hookActionObjectCurrencyUpdateBefore($params)
+	{
+		// do not apply changes if currency is updated mannualy or BlueSnap EX Rates API is disabled
+		if (!Tools::getIsset('submitUpdate') && !Tools::getIsset('submitAddcurrency') && $this->getConfig('USE_BS_EXCHANGE'))
+		{
+			$currency = $params['object'];
+			/* @var $currency Currency */
+
+			$default_currency = Currency::getDefaultCurrency();
+			$conversion_rate = $this->api->getCurrencyRate($default_currency->iso_code, $currency->iso_code);
+
+			if ($conversion_rate != null && $conversion_rate != $currency->conversion_rate)
+				$currency->conversion_rate = $conversion_rate;
+		}
 	}
 
 	/**
@@ -622,11 +674,12 @@ class Bluesnap extends PaymentModule {
 
 		$total = $this->context->cart->getOrderTotal(true, Cart::BOTH);
 		$currency_code = $current_currency_code = $this->context->currency->iso_code;
-		$usd_currency_id = Currency::getIdByIsoCode('USD');
-		if (!Currency::isLocallySupported($current_currency_code) && $usd_currency_id)
+		$usd_currency_id = (int)Currency::getIdByIsoCode('USD');
+		if (!$this->isLocallySupported($current_currency_code) && $usd_currency_id)
 		{
 			$currency = Currency::getCurrencyInstance($usd_currency_id);
-			$base = $total / $this->context->currency->conversion_rate;
+			$conversion_rate = $this->context->currency->conversion_rate?$this->context->currency->conversion_rate:1;
+			$base = $total / $conversion_rate;
 			$usd_total = $currency->conversion_rate * $base;
 
 			$c_decimals = (int)$currency->decimals * _PS_PRICE_DISPLAY_PRECISION_;
@@ -769,4 +822,13 @@ class Bluesnap extends PaymentModule {
 		}
 	}
 
+	/**
+	 * Check if currency is on a BS locally supported currencis list
+	 * @param string $currency_code
+	 * @return bool
+	 */
+	public static function isLocallySupported($currency_code)
+	{
+		return in_array($currency_code, self::$locally_supported);
+	}
 }

@@ -40,6 +40,8 @@ class BluesnapApi {
 	const VERSION = '2';
 	const HTTP_METHOD_POST = 0;
 	const HTTP_METHOD_PUT = 1;
+	const HTTP_METHOD_GET = 2;
+	const EX_RATE_DEFAULT_SUM = 10000;
 
 	/**
 	 * API username
@@ -437,6 +439,33 @@ class BluesnapApi {
 			return Tools::strtoupper($language_codes[$iso]);
 
 		return null;
+	}
+
+	/**
+	 * Get currency exchange rate
+	 * @param string $from
+	 * @param string $to
+	 * @return float|null
+	 */
+	public function getCurrencyRate($from, $to)
+	{
+		$amount = self::EX_RATE_DEFAULT_SUM;
+		$url = $this->getServiceUrl('tools/merchant-currency-convertor');
+		$url .= '?'.http_build_query(array('from' => $from, 'to' => $to, 'amount' => $amount));
+
+		$old_debug_log = $this->debug_log_name;
+		$this->debug_log_name = 'log/bluesnap_exchange_api.log';
+
+		$result = null;
+
+		$response = $this->request($url, '', self::HTTP_METHOD_GET);
+
+		if ($response)
+			if ($response->value)
+				$result = ((float)$response->value) / self::EX_RATE_DEFAULT_SUM;
+
+		$this->debug_log_name = $old_debug_log;
+		return $result;
 	}
 
 }

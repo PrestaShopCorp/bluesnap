@@ -80,11 +80,12 @@ ModuleFrontController {
 	{
 		$total = $this->context->cart->getOrderTotal(true, Cart::BOTH);
 		$current_currency_code = $this->context->currency->iso_code;
-		$usd_currency_id = Currency::getIdByIsoCode('USD');
+		$usd_currency_id = (int)Currency::getIdByIsoCode('USD');
 		$usd_total = false;
 		if (!Currency::isLocallySupported($current_currency_code) && $usd_currency_id)
 		{
-			$base = $total / $this->context->currency->conversion_rate;
+			$conversion_rate = $this->context->currency->conversion_rate?$this->context->currency->conversion_rate:1;
+			$base = $total / $conversion_rate;
 			$usd_total = Currency::getCurrencyInstance($usd_currency_id)->conversion_rate * $base;
 		}
 		$this->context->smarty->assign('usd_total', Tools::displayPrice($usd_total, $usd_currency_id));
