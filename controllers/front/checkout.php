@@ -1,6 +1,6 @@
 <?php
 /**
- * 2007-2014 PrestaShop
+ * 2007-2015 PrestaShop
  *
  * NOTICE OF LICENSE
  *
@@ -21,7 +21,7 @@
  * @category	Belvg
  * @package	Belvg_BlueSnap
  * @author    Alexander Simonchik <support@belvg.com>
- * @copyright Copyright (c) 2010 - 2014 BelVG LLC. (http://www.belvg.com)
+ * @copyright Copyright (c) 2010 - 2015 BelVG LLC. (http://www.belvg.com)
  * @license   http://store.belvg.com/BelVG-LICENSE-COMMUNITY.txt
  */
 
@@ -41,13 +41,16 @@ ModuleFrontController {
 	 * @var bool
 	 */
 	public $ssl = true;
+	private static $usd_amount = null;
 
 	/**
 	 * check access for using this module
 	 */
 	public function postProcess()
 	{
-		if ($this->context->cart->id_customer == 0 || $this->context->cart->id_address_delivery == 0 || $this->context->cart->id_address_invoice == 0 || !$this->module->active)
+		if ($this->context->cart->id_customer == 0 ||
+			$this->context->cart->id_address_delivery == 0 ||
+			$this->context->cart->id_address_invoice == 0 || !$this->module->active)
 			Tools::redirectLink(__PS_BASE_URI__.'order.php?step=1');
 
 		/* Check that this payment option is still available in case the customer changed
@@ -71,6 +74,23 @@ ModuleFrontController {
 	}
 
 	/**
+	 * @param float $total
+	 */
+	public function assignDefaultTotals($total)
+	{
+		$total = $this->context->cart->getOrderTotal(true, Cart::BOTH);
+		$current_currency_code = $this->context->currency->iso_code;
+		$usd_currency_id = Currency::getIdByIsoCode('USD');
+		$usd_total = false;
+		if (!Currency::isLocallySupported($current_currency_code) && $usd_currency_id)
+		{
+			$base = $total / $this->context->currency->conversion_rate;
+			$usd_total = Currency::getCurrencyInstance($usd_currency_id)->conversion_rate * $base;
+		}
+		$this->context->smarty->assign('usd_total', Tools::displayPrice($usd_total, $usd_currency_id));
+	}
+
+	/**
 	 * display form for placing order
 	 * after confirm order, create new order and redirect to iframe with payment gateway
 	 */
@@ -90,8 +110,11 @@ ModuleFrontController {
 		}
 		else
 		{
+			$total = $this->context->cart->getOrderTotal(true, Cart::BOTH);
+			$this->assignDefaultTotals($total);
+
 			$this->context->smarty->assign(array(
-				'total' => $this->context->cart->getOrderTotal(true, Cart::BOTH),
+				'total' => $total,
 				'this_path' => $this->module->getPathUri(),
 				'this_path_ssl' => Tools::getShopDomainSsl(true, true).__PS_BASE_URI__.'modules/'.$this->module->name.'/'
 			));
@@ -186,6 +209,8 @@ ModuleFrontController {
 			'show_option_allow_separate_package' => $show_option_allow_separate_package,
 			'smallSize' => Image::getSize(ImageType::getFormatedName('small')),
 		));
+
+		$this->assignDefaultTotals($this->context->cart->getOrderTotal(true, Cart::BOTH));
 
 		$this->context->smarty->assign(array(
 			'HOOK_SHOPPING_CART' => Hook::exec('displayShoppingCartFooter', $summary),

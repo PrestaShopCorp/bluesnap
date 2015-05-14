@@ -25,11 +25,9 @@
 *}
 
 {*l s='Redirect...' mod='bluesnap'*}
-
 <script type="text/javascript">
-    if (window.parent) {
-        window.parent.document.location.href='{$bluesnap_order_confirmation_url}';
-    } else {
-        document.location.href = '{$bluesnap_order_confirmation_url}';
-    }
+    if (window.parent)
+        window.parent.document.location.href='{$bluesnap_order_confirmation_url|addslashes}';
+    else
+        document.location.href = '{$bluesnap_order_confirmation_url|addslashes}';
 </script>

@@ -1,6 +1,6 @@
 <?php
 /**
- * 2007-2014 PrestaShop
+ * 2007-2015 PrestaShop
  *
  * NOTICE OF LICENSE
  *
@@ -21,7 +21,7 @@
  * @category	Belvg
  * @package	Belvg_BlueSnap
  * @author    Alexander Simonchik <support@belvg.com>
- * @copyright Copyright (c) 2010 - 2014 BelVG LLC. (http://www.belvg.com)
+ * @copyright Copyright (c) 2010 - 2015 BelVG LLC. (http://www.belvg.com)
  * @license   http://store.belvg.com/BelVG-LICENSE-COMMUNITY.txt
  */
 
@@ -35,7 +35,7 @@ require_once _PS_MODULE_DIR_.'bluesnap/includer.php';
 class BluesnapApi {
 
 	const API_BASE_URL_SANDBOX = 'https://sandbox.bluesnap.com/services';
-	const API_BASE_URL = 'https://www.bluesnap.com/services';
+	const API_BASE_URL = 'https://ws.bluesnap.com/services';
 	const XML_NS = 'http://ws.plimus.com';
 	const VERSION = '2';
 	const HTTP_METHOD_POST = 0;
@@ -60,14 +60,14 @@ class BluesnapApi {
 	 *
 	 * @var
 	 */
-	private $is_debug_mode;
+	protected $is_debug_mode;
 
 	/**
 	 * Log path
 	 *
 	 * @var string
 	 */
-	private $debug_log_name = 'log/bluesnap_buynow_api.log';
+	public $debug_log_name = 'log/bluesnap_buynow_api.log';
 
 	/**
 	 * Create API object
@@ -118,7 +118,7 @@ class BluesnapApi {
 	 *
 	 * @return string
 	 */
-	protected function getServiceUrl($service)
+	public function getServiceUrl($service)
 	{
 		$api_url = Configuration::get('BLUESNAP_SANDBOX') ? self::API_BASE_URL_SANDBOX : self::API_BASE_URL;
 		return implode('/', array($api_url, self::VERSION, $service));
@@ -132,11 +132,8 @@ class BluesnapApi {
 		if (!empty($response))
 		{
 			// error
-			$response = (array)$response;
-			if (isset($response['message']))
-				bluesnap::log('API error[refund action] : '.(string)$response['message']->description);
-			elseif (isset($response[0]))
-				bluesnap::log('API error[refund action] : '.$response[0]);
+			if ($response->message && $response->message->description)
+				bluesnap::log('API error[refund action] : '.(string)$response->message->description);
 
 			return false;
 		}

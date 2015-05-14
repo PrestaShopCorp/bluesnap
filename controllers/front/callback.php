@@ -1,6 +1,6 @@
 <?php
 /**
- * 2007-2014 PrestaShop
+ * 2007-2015 PrestaShop
  *
  * NOTICE OF LICENSE
  *
@@ -21,7 +21,7 @@
  * @category	Belvg
  * @package	Belvg_BlueSnap
  * @author    Alexander Simonchik <support@belvg.com>
- * @copyright Copyright (c) 2010 - 2014 BelVG LLC. (http://www.belvg.com)
+ * @copyright Copyright (c) 2010 - 2015 BelVG LLC. (http://www.belvg.com)
  * @license   http://store.belvg.com/BelVG-LICENSE-COMMUNITY.txt
  */
 
@@ -72,20 +72,16 @@ class BluesnapCallbackModuleFrontController extends
 		$order_state_obj = new OrderState(Configuration::get('BS_OS_PAYMENT_VALID'));
 		if ($order_obj->current_state != $order_state_obj->id)
 		{
-			$bluesnap_info = BluesnapOrder::getByPsCartId($id_cart);
-			if (isset($bluesnap_info['bluesnap_reference']) && !empty($bluesnap_info['bluesnap_reference']))
-			{
-				$ipn_obj = new BluesnapIpn();
-				$ipn_obj->changeOrderStatus($order_obj, (int)Configuration::get('BS_OS_PAYMENT_VALID'), $this->errors);
-			}
+			$ipn_obj = new BluesnapIpn();
+			$ipn_obj->changeOrderStatus($order_obj, (int)Configuration::get('BS_OS_PAYMENT_VALID'), $this->errors);
 		}
 		Configuration::updateValue('BLUESNAP_CONFIGURATION_OK', true);
 
 		$this->context->smarty->assign(array(
-			'bluesnap_order_confirmation_url' => Context::getContext()->link->getPageLink('order-confirmation', NULL, NULL, array(
-				'id_order' => $this->module->currentOrder, 
+			'bluesnap_order_confirmation_url' => Context::getContext()->link->getPageLink('order-confirmation', null, null, array(
+				'id_order' => $this->module->currentOrder,
 				'id_cart' => $id_cart,
-				'id_module' => $this->module->id, 
+				'id_module' => $this->module->id,
 				'key' => $order_obj->secure_key,
 				))
 		));

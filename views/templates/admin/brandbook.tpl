@@ -1,5 +1,5 @@
 {*
-* 2007-2014 PrestaShop
+* 2007-2015 PrestaShop
 *
 * NOTICE OF LICENSE
 *
@@ -20,20 +20,20 @@
 * @package    Belvg_BlueSnap
 * @author    Alexander Simonchik <support@belvg.com>
 * @site
-* @copyright  Copyright (c) 2010 - 2014 BelVG LLC. (http://www.belvg.com)
+* @copyright  Copyright (c) 2010 - 2015 BelVG LLC. (http://www.belvg.com)
 * @license    http://store.belvg.com/BelVG-LICENSE-COMMUNITY.txt
 *}
-<style>@import '{$bluesnap_img_url|escape:'htmlall':'UTF-8'}css/bluesnap-font.css';</style>
-<style>@import '{$bluesnap_img_url|escape:'htmlall':'UTF-8'}css/bluesnap-desc.css';</style>
+<style>@import '{$bluesnap_img_url|escape:'htmlall':'UTF-8'}views/css/bluesnap-font.css';</style>
+<style>@import '{$bluesnap_img_url|escape:'htmlall':'UTF-8'}views/css/bluesnap-desc.css';</style>
 <div class="bluesnap-desc-wrapper">
 	<div class="bluesnap-desc-logo">
-		<img src="{$bluesnap_img_url|escape:'htmlall':'UTF-8'}img/logo.png" alt="" />
+		<img src="{$bluesnap_img_url|escape:'htmlall':'UTF-8'}views/img/logo.png" alt="" />
 	</div>
 	<div class="bluesnap-desc-title">
 		<span>{l s='Accept global payments easily and securely.' mod='bluesnap'}</span>
 	</div>
 	<div class="bluesnap-desc-actions">
-		<div><a href="http://www.bluesnap.com/ecommerce/partner-referral-prestashop" target="_blank" class="bluesnap-desc-action-link"><span>{l s='Sign Up Now.' mod='bluesnap'}</span></a></div>
+		<div><a href="http://home.bluesnap.com/ecommerce/partner-connections/shopping-carts/prestashop" target="_blank" class="bluesnap-desc-action-link"><span>{l s='Sign Up Now.' mod='bluesnap'}</span></a></div>
 		<div class="bluesnap-desc-action-notice">{l s='Rates as low as 2.9% + 30.' mod='bluesnap'} &cent;</div>
 	</div>
 	<div class="bluesnap-desc-content">
@@ -58,9 +58,8 @@
 		<div class="bluesnap-desc-col3">
 			<div class="bluesnap-desc-subtitle">{l s='Quick' mod='bluesnap'} &amp; {l s='Easy Setup' mod='bluesnap'}</div>
 			<ul class="bluesnap-desc-list bluesnap-desc-list-alt">
-				<li class="bluesnap-desc-list-item"><a href="http://www.bluesnap.com/ecommerce/partner-referral-prestashop" target="_blank"><b>{l s='Sign up' mod='bluesnap'}</b></a> {l s='with us and get your BlueSnap credentials' mod='bluesnap'}</li>
-				<li class="bluesnap-desc-list-item">{l s='Follow this' mod='bluesnap'} <a href="http://bluesnap.com/files/prestashop_integration_module.pdf" target="_blank"><b>{l s='Integration Guide' mod='bluesnap'}</b></a> {l s='to setup the BlueSnap module' mod='bluesnap'}</li>
-				<li class="bluesnap-desc-list-item">{l s='Configure your' mod='bluesnap'} <a href="http://home.bluesnap.com/userguide/default.htm#WordManual/BuyNow Page Customization.htm" target="_blank"><b>{l s='callback URL' mod='bluesnap'}</b></a> {l s='and' mod='bluesnap'} <a href="http://home.bluesnap.com/integrationguide/default.htm#WordManual/Setting%20Up%20an%20IPN.htm%3FTocPath%3DInstant%2520Notifications%2520(IPN)%7C_____3" target="_blank"><b>{l s='IPN URL' mod='bluesnap'}</b></a> {l s='in your BlueSnap account' mod='bluesnap'}</li>
+				<li class="bluesnap-desc-list-item"><a href="http://home.bluesnap.com/ecommerce/partner-connections/shopping-carts/prestashop" target="_blank"><b>{l s='Sign up' mod='bluesnap'}</b></a> {l s='with us and get your BlueSnap credentials' mod='bluesnap'}</li>
+				<li class="bluesnap-desc-list-item">{l s='Follow this' mod='bluesnap'} <a href="http://home.bluesnap.com/PrestaShop/default.htm" target="_blank"><b>{l s='Integration Guide' mod='bluesnap'}</b></a> {l s='to setup the BlueSnap module' mod='bluesnap'}</li>
 				<li class="bluesnap-desc-list-item">{l s='Start accepting payments with BlueSnap' mod='bluesnap'}</li>
 			</ul>
 		</div>
@@ -68,12 +67,12 @@
 		<div class="bluesnap-desc-footer">
 			<div class="bluesnap-desc-payment">
 				<div class="bluesnap-desc-subtitle">{l s='Accepted Global Payment Types' mod='bluesnap'}</div>
-				<p><img src="{$bluesnap_img_url|escape:'htmlall':'UTF-8'}img/payment_types.png" alt="" /></p>
+				<p><img src="{$bluesnap_img_url|escape:'htmlall':'UTF-8'}views/img/payment_types.png" alt="" /></p>
 			</div>
 			<div class="bluesnap-desc-start">
 				<div class="bluesnap-desc-subtitle">&nbsp;</div>
 				<ul class="bluesnap-desc-list bluesnap-desc-list-alt">
-					<li class="bluesnap-desc-list-item"><a href="http://www.bluesnap.com/ecommerce/partner-referral-prestashop" target="_blank"><b>{l s='Start accepting global payments with BlueSnap today!' mod='bluesnap'}</b></a></li>
+					<li class="bluesnap-desc-list-item"><a href="http://home.bluesnap.com/ecommerce/partner-connections/shopping-carts/prestashop" target="_blank"><b>{l s='Start accepting global payments with BlueSnap today!' mod='bluesnap'}</b></a></li>
 				</ul>
 			</div>
 		</div>
