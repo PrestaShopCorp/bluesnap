@@ -1,6 +1,6 @@
 <?php
 /**
- * 2007-2014 PrestaShop
+ * 2007-2015 PrestaShop
  *
  * NOTICE OF LICENSE
  *
@@ -21,7 +21,7 @@
  * @category	Belvg
  * @package	Belvg_BlueSnap
  * @author    Alexander Simonchik <support@belvg.com>
- * @copyright Copyright (c) 2010 - 2014 BelVG LLC. (http://www.belvg.com)
+ * @copyright Copyright (c) 2010 - 2015 BelVG LLC. (http://www.belvg.com)
  * @license   http://store.belvg.com/BelVG-LICENSE-COMMUNITY.txt
  */
 
@@ -35,11 +35,13 @@ require_once _PS_MODULE_DIR_.'bluesnap/includer.php';
 class BluesnapApi {
 
 	const API_BASE_URL_SANDBOX = 'https://sandbox.bluesnap.com/services';
-	const API_BASE_URL = 'https://www.bluesnap.com/services';
+	const API_BASE_URL = 'https://ws.bluesnap.com/services';
 	const XML_NS = 'http://ws.plimus.com';
 	const VERSION = '2';
 	const HTTP_METHOD_POST = 0;
 	const HTTP_METHOD_PUT = 1;
+	const HTTP_METHOD_GET = 2;
+	const EX_RATE_DEFAULT_SUM = 10000;
 
 	/**
 	 * API username
@@ -60,14 +62,14 @@ class BluesnapApi {
 	 *
 	 * @var
 	 */
-	private $is_debug_mode;
+	protected $is_debug_mode;
 
 	/**
 	 * Log path
 	 *
 	 * @var string
 	 */
-	private $debug_log_name = 'log/bluesnap_buynow_api.log';
+	public $debug_log_name = 'log/bluesnap_buynow_api.log';
 
 	/**
 	 * Create API object
@@ -118,7 +120,7 @@ class BluesnapApi {
 	 *
 	 * @return string
 	 */
-	protected function getServiceUrl($service)
+	public function getServiceUrl($service)
 	{
 		$api_url = Configuration::get('BLUESNAP_SANDBOX') ? self::API_BASE_URL_SANDBOX : self::API_BASE_URL;
 		return implode('/', array($api_url, self::VERSION, $service));
@@ -132,11 +134,8 @@ class BluesnapApi {
 		if (!empty($response))
 		{
 			// error
-			$response = (array)$response;
-			if (isset($response['message']))
-				bluesnap::log('API error[refund action] : '.(string)$response['message']->description);
-			elseif (isset($response[0]))
-				bluesnap::log('API error[refund action] : '.$response[0]);
+			if ($response->message && $response->message->description)
+				bluesnap::log('API error[refund action] : '.(string)$response->message->description);
 
 			return false;
 		}
@@ -440,6 +439,33 @@ class BluesnapApi {
 			return Tools::strtoupper($language_codes[$iso]);
 
 		return null;
+	}
+
+	/**
+	 * Get currency exchange rate
+	 * @param string $from
+	 * @param string $to
+	 * @return float|null
+	 */
+	public function getCurrencyRate($from, $to)
+	{
+		$amount = self::EX_RATE_DEFAULT_SUM;
+		$url = $this->getServiceUrl('tools/merchant-currency-convertor');
+		$url .= '?'.http_build_query(array('from' => $from, 'to' => $to, 'amount' => $amount));
+
+		$old_debug_log = $this->debug_log_name;
+		$this->debug_log_name = 'log/bluesnap_exchange_api.log';
+
+		$result = null;
+
+		$response = $this->request($url, '', self::HTTP_METHOD_GET);
+
+		if ($response)
+			if ($response->value)
+				$result = ((float)$response->value) / self::EX_RATE_DEFAULT_SUM;
+
+		$this->debug_log_name = $old_debug_log;
+		return $result;
 	}
 
 }

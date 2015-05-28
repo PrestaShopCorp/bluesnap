@@ -1,6 +1,6 @@
 <?php
 /**
- * 2007-2014 PrestaShop
+ * 2007-2015 PrestaShop
  *
  * NOTICE OF LICENSE
  *
@@ -21,7 +21,7 @@
  * @category	Belvg
  * @package	Belvg_BlueSnap
  * @author    Alexander Simonchik <support@belvg.com>
- * @copyright Copyright (c) 2010 - 2014 BelVG LLC. (http://www.belvg.com)
+ * @copyright Copyright (c) 2010 - 2015 BelVG LLC. (http://www.belvg.com)
  * @license   http://store.belvg.com/BelVG-LICENSE-COMMUNITY.txt
  */
 
@@ -40,6 +40,7 @@ class BluesnapIpn extends BluesnapApi {
 	const PARAM_AUTH_KEY = 'authKey';
 	const TRANSACTION_TYPE_CHARGE = 'CHARGE';
 	const TRANSACTION_TYPE_REFUND = 'REFUND';
+	const TRANSACTION_TYPE_CANCELLATION_REFUND = 'CANCELLATION_REFUND';
 	const REFUND_ORDER_STATE = 7;
 
 	/**
@@ -95,6 +96,7 @@ class BluesnapIpn extends BluesnapApi {
 				return $this->processChargeTransactionRequest();
 
 			case self::TRANSACTION_TYPE_REFUND:
+			case self::TRANSACTION_TYPE_CANCELLATION_REFUND:
 				return $this->processRefundTransactionRequest();
 
 			default:

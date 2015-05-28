@@ -28,9 +28,9 @@
 <div class="conf confirmation">
 	{l s='Congratulations! Your payment is done, and your order has been saved under' mod='bluesnap'}
 	{if isset($bluesnap_order.reference)}
-		{l s='the reference' mod='bluesnap'} <b>{$bluesnap_order.reference|escape:html:'UTF-8'}</b>
+		{l s='the reference' mod='bluesnap'} <b>{$bluesnap_order.reference|escape:'html':'UTF-8'}</b>
 	{else}
-		{l s='the ID' mod='bluesnap'} <b>{$bluesnap_order.id|escape:html:'UTF-8'}</b>
+		{l s='the ID' mod='bluesnap'} <b>{$bluesnap_order.id|escape:'html':'UTF-8'}</b>
 	{/if}.
 	<br /><br />
 	{l s='The total amount of this order is' mod='bluesnap'} <span class="price">{$bluesnap_order.total_to_pay|escape:'htmlall':'UTF-8'}</span>
@@ -39,9 +39,9 @@
 <div class="error">
 	{l s='Unfortunately, an error occurred during the transaction.' mod='bluesnap'}<br /><br />
 	{if isset($bluesnap_order.reference)}
-		({l s='Your Order\'s Reference:' mod='bluesnap'} <b>{$bluesnap_order.reference|escape:html:'UTF-8'}</b>)
+		({l s='Your Order\'s Reference:' mod='bluesnap'} <b>{$bluesnap_order.reference|escape:'html':'UTF-8'}</b>)
 	{else}
-		({l s='Your Order\'s ID:' mod='bluesnap'} <b>{$bluesnap_order.id|escape:html:'UTF-8'}</b>)
+		({l s='Your Order\'s ID:' mod='bluesnap'} <b>{$bluesnap_order.id|escape:'html':'UTF-8'}</b>)
 	{/if}
 </div>
 {/if}
