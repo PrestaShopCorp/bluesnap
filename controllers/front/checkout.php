@@ -82,7 +82,7 @@ ModuleFrontController {
 		$current_currency_code = $this->context->currency->iso_code;
 		$usd_currency_id = (int)Currency::getIdByIsoCode('USD');
 		$usd_total = false;
-		if (!Currency::isLocallySupported($current_currency_code) && $usd_currency_id)
+		if (!Bluesnap::isLocallySupported($current_currency_code) && $usd_currency_id)
 		{
 			$conversion_rate = $this->context->currency->conversion_rate?$this->context->currency->conversion_rate:1;
 			$base = $total / $conversion_rate;
