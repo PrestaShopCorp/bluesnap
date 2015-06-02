@@ -24,11 +24,11 @@
 .bluesnap-desc-action-notice { margin: 6px 0 0; }
 .bluesnap-desc-content { clear: both; border: 2px solid #eaeaea; padding: 24px 0; zoom: 1; }
 .bluesnap-desc-content:after { content: ' '; display: table; clear: both; }
-.bluesnap-desc-col1, .bluesnap-desc-col2, .bluesnap-desc-col3 { float: left; padding: 0 1.5%; width: 30%; }
+.bluesnap-desc-col1, .bluesnap-desc-col2, .bluesnap-desc-col3 { float: left; padding: 0 1.5%; width: 32%; }
 .bluesnap-desc-content * { color: #0550aa; }
 .bluesnap-desc-subtitle { text-align: center; font-size: 22px; margin: 0 0 10px; }
 .bluesnap-desc-list { font-family: 'montrealts-xlight'; }
-.bluesnap-desc-list-item { background: url(../img/icon_item.png) no-repeat 0 1px; padding: 2px 0 10px 32px; }
+.bluesnap-desc-list-item { background: url(../img/icon_item.png) no-repeat 0 1px; padding: 2px 0 10px 32px;list-style-type:none }
 .bluesnap-desc-list-alt .bluesnap-desc-list-item { background: url(../img/icon_item_alt.png) no-repeat 6px 3px; padding-left: 24px; }
 .bluesnap-desc-list-item .big { font-weight: bold; font-size: 120%; }
 .bluesnap-desc-list-item a { text-decoration: underline; }

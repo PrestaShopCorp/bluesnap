@@ -149,12 +149,12 @@
         {if $use_taxes}
             <td colspan="2" class="price total_price_container" id="total_price_container">
                 <p>{l s='Total' mod='bluesnap'}</p>
-                <span id="total_price">{displayPrice price=$total_price}</span>
+                <span id="total_price">{displayPrice price=$total_price}  {if $usd_total}({$usd_total}){/if}</span>
             </td>
         {else}
             <td colspan="2" class="price total_price_container" id="total_price_container">
                 <p>{l s='Total' mod='bluesnap'}</p>
-                <span id="total_price">{displayPrice price=$total_price_without_tax}</span>
+                <span id="total_price">{displayPrice price=$total_price_without_tax} {if $usd_total}({$usd_total}){/if}</span>
             </td>
         {/if}
     </tr>

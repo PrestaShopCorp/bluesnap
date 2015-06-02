@@ -1,5 +1,5 @@
 {*
-* 2007-2014 PrestaShop
+* 2007-2015 PrestaShop
 *
 * NOTICE OF LICENSE
 *
@@ -20,16 +20,16 @@
 * @package    Belvg_BlueSnap
 * @author    Alexander Simonchik <support@belvg.com>
 * @site
-* @copyright  Copyright (c) 2010 - 2014 BelVG LLC. (http://www.belvg.com)
-* @license    http://store.belvg.com/BelVG-LICENSE-COMMUNITY.txt 
+* @copyright  Copyright (c) 2010 - 2015 BelVG LLC. (http://www.belvg.com)
+* @license    http://store.belvg.com/BelVG-LICENSE-COMMUNITY.txt
 *}
 
 <div class="row">
     <div class="col-xs-12 col-md-6">
         <div class="payment_module" id="bluesnap_payment_module">
-            <a href="{$bluesnap_url|escape:'htmlall':'UTF-8'}" title="{l s='Local credit cards and payment options (by BlueSnap) based on your country.' mod='bluesnap'}" class="bluesnap">
-                <p>{l s='Local credit cards and payment options (by BlueSnap) based on your country.' mod='bluesnap'}</p>
-                <p><img src="{$bluesnap_path|escape:'htmlall':'UTF-8'}img/logos.png" alt="{l s='Local credit cards and payment options (by BlueSnap) based on your country.' mod='bluesnap'}" id="bluesnap_img" /></p>
+            <a href="{$bluesnap_url|escape:'htmlall':'UTF-8'}" title="{l s='Credit Cards and Local Payment Options.' mod='bluesnap'}" class="bluesnap">
+                <p>{l s='Credit Cards and Local Payment Options.' mod='bluesnap'}</p>
+                <p><img src="{$bluesnap_path|escape:'htmlall':'UTF-8'}views/img/logos.png" alt="{l s='Credit Cards and Local Payment Options.' mod='bluesnap'}" id="bluesnap_img" /></p>
                 <br class="clearfix" />
             </a>
         </div>

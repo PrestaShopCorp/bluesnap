@@ -37,16 +37,17 @@
         <input type="hidden" name="confirm" value="1" />
         <div class="bluesnap_container">
             <div class="bluesnap_logo_left">
-                <img src="{$this_path|escape:'htmlall':'UTF-8'}img/logos.png" alt="{l s='BlueSnap payment' mod='bluesnap'}" />
+                <img src="{$this_path|escape:'htmlall':'UTF-8'}views/img/logos.png" alt="{l s='BlueSnap payment' mod='bluesnap'}" />
             </div>
             <div>
                 <p>{l s='You have chosen to pay with BlueSnap’s local payment options.' mod='bluesnap'}</p>
                 <p>{l s='The total amount of your order is' mod='bluesnap'}
-                    <span id="amount_{$currencies.0.id_currency|intval}" class="price bluesnap_price">{convertPrice price=$total}</span>
-                    {if $use_taxes == 1}
-                        {l s='(tax incl.)' mod='bluesnap'}
-                    {/if}
-                </p>
+                    <span id="amount_{$currencies.0.id_currency|intval}" class="price bluesnap_price">{convertPrice price=$total}</span>.
+					{if $usd_total}{l s='You\'ll be charged' mod='bluesnap'} <span class="price bluesnap_price">{$usd_total|escape:'htmlall':'UTF-8'}</span>{/if}
+					{if $use_taxes == 1}
+						{l s='(tax incl.)' mod='bluesnap'}
+					{/if}
+				</p>
             </div>
             <div class="clear"></div>
         </div>
